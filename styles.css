@@ -160,6 +160,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 
 /* Buttons */
 .links { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn[hidden] { display: none; }
 .btn {
   font: var(--s-2)/1 var(--mono); letter-spacing: .12em;
   padding: 13px 22px; border: 1px solid var(--rule); color: var(--ink-2); background: none; cursor: pointer;
