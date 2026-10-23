@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUSF Projects Summary</title>
+  <meta name="description" content="One-page summary of the plan for Southampton University Spaceflight Society's projects, 2026–27 onward, by Diego Paniagua Silva, Head of Projects.">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2026-10-24c">
+  <style>
+    /* One-pager: same tokens as the portfolio; fits one A4 sheet when printed. */
+    .op { max-width: 980px; margin: 0 auto; padding: 48px var(--gutter) 64px; }
+    .op-back { font: var(--s-2)/1.5 var(--mono); letter-spacing: .08em; margin: 0 0 32px; }
+    .op-eyebrow { font: var(--s-2)/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-text); margin: 0 0 8px; }
+    .op h1 { font: 300 var(--s4)/1.1 var(--serif); letter-spacing: -.015em; margin: 0 0 12px; }
+    .op-lede { color: var(--ink-2); max-width: 46em; margin: 0 0 32px; }
+    .op h2 { font: var(--s-2)/1.5 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 12px; font-weight: 400; }
+    .op section { border-top: 1px solid var(--rule); padding: 20px 0 24px; }
+    :where(.op) p, :where(.op) li { margin: 0; }
+    .op ul { margin: 0; padding-left: 1.1em; }
+    .op li + li { margin-top: 4px; }
+    .op h3 { font: 400 var(--s1)/1.25 var(--serif); margin: 0 0 6px; }
+    .op-cols { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+    .op-cols > div { background: var(--paper); padding: 14px 16px; }
+    .op-cols.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .op-cols.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .op-cols.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .op-when { font: var(--s-2)/1.5 var(--mono); letter-spacing: .08em; color: var(--accent-text); margin: 0 0 6px !important; }
+    .op-num { font: var(--s-2)/1.5 var(--mono); color: var(--accent-text); margin: 0 0 2px !important; }
+    .op-small { font-size: var(--s-1); color: var(--ink-2); }
+    .op table { width: 100%; max-width: none; margin: 0; border-collapse: collapse; font-size: var(--s-1); }
+    .op th, .op td { text-align: left; vertical-align: top; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); font-family: var(--sans); font-variant-numeric: normal; color: var(--ink-2); }
+    .op thead th { border-bottom-color: var(--ink-3); }
+    .op thead th { font: var(--s-2)/1.5 var(--mono); letter-spacing: .08em; color: var(--ink-3); font-weight: 400; }
+    .op tbody th { font: 400 var(--s0)/1.3 var(--serif); letter-spacing: 0; color: var(--ink); width: 22%; }
+    .op tbody th span { display: block; font: var(--s-2)/1.5 var(--mono); letter-spacing: .04em; color: var(--ink-3); margin-top: 2px; }
+    .op-note { font-size: var(--s-1); color: var(--ink-3); margin-top: 10px !important; }
+    .op-streams { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; padding: 0; list-style: none; }
+    .op-streams li { margin: 0 !important; font: var(--s-2)/1.5 var(--mono); letter-spacing: .06em; border: 1px solid var(--rule); padding: 4px 10px; }
+    .op-sign { font: var(--s-2)/1.5 var(--mono); color: var(--ink-3); border-top: 1px solid var(--rule); padding-top: 16px; margin: 0; }
+    @media (max-width: 720px) {
+      .op { padding-top: 32px; }
+      .op-cols.three, .op-cols.four { grid-template-columns: minmax(0, 1fr); }
+      .op table, .op thead, .op tbody, .op tr, .op th, .op td { display: block; }
+      .op thead { display: none; }
+      .op tbody tr { border-bottom: 1px solid var(--rule); padding: 10px 0; }
+      .op th, .op td { border: 0; padding: 2px 0; }
+      .op tbody th { width: auto; }
+      .op td::before { content: attr(data-label) ": "; color: var(--ink-3); }
+    }
+    @media (max-width: 480px) { .op-cols.two { grid-template-columns: minmax(0, 1fr); } }
+    @page { size: A4; margin: 12mm; }
+    @media print {
+      .op { padding: 0; max-width: none; font-size: 10.5px; line-height: 1.4; }
+      .op-back { display: none; }
+      .op h1 { font-size: 26px; margin-bottom: 6px; }
+      .op-lede { margin-bottom: 12px; }
+      .op section { padding: 10px 0 12px; break-inside: avoid; }
+      .op h2 { margin-bottom: 6px; font-size: 9px; }
+      .op h3 { font-size: 13px; margin-bottom: 3px; }
+      .op-cols > div { padding: 8px 10px; }
+      .op-small, .op table, .op-note { font-size: 10px; }
+      .op th, .op td { padding: 4px 10px 4px 0; }
+      .op tbody th { font-size: 12px; }
+      .op-eyebrow, .op-when, .op-num, .op thead th, .op tbody th span, .op-streams li, .op-sign { font-size: 9px; }
+      .op li + li { margin-top: 2px; }
+    }
+  </style>
+</head>
+<body>
+<main class="op">
+  <p class="op-back"><a href="index.html#head-of-projects">← Back to the portfolio</a></p>
+
+  <p class="op-eyebrow">Southampton University Spaceflight Society · Oct 2026</p>
+  <h1>How we run SUSF's projects, 2026–27 onward</h1>
+  <p class="op-lede">A one-page summary of the plan I wrote and presented as Head of Projects. SUSF grew as a set of projects, each started and led by whoever had the idea and the skills. This plan turns them into one society with shared goals.</p>
+
+  <section>
+    <h2>Where we are going</h2>
+    <div class="op-cols two">
+      <div>
+        <p class="op-when">This year · 26/27</p>
+        <ul>
+          <li>Strong competition results for CubeSat and Mars Rover</li>
+          <li>An electric propulsion thruster test</li>
+          <li>A liquid bipropellant hot fire on our own test stand</li>
+        </ul>
+      </div>
+      <div>
+        <p class="op-when">Next one to two years · 27/28 – 28/29</p>
+        <ul>
+          <li>Starworks full-stack lander test and hop</li>
+          <li>An application to ESA Fly Your Satellite</li>
+          <li>Further electric propulsion work</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The problem</h2>
+    <div class="op-cols three">
+      <div><h3>Strategy set project by project</h3><p class="op-small">Teams set their own direction, and collaboration between them relied on individual initiative.</p></div>
+      <div><h3>Knowledge left with individuals</h3><p class="op-small">Capability sat with one or two people per team, and left when they graduated.</p></div>
+      <div><h3>Outreach run team by team</h3><p class="op-small">Sponsor-seeking was fragmented across teams, and public posting was rare.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Four pillars</h2>
+    <div class="op-cols four">
+      <div><p class="op-num">01</p><h3>Knowledge</h3><p class="op-small">Intro to Space for every new member each autumn, a specialist electric propulsion curriculum, and a shared compendium, SharePoint and GitHub so knowledge stays with the society.</p></div>
+      <div><p class="op-num">02</p><h3>Direction</h3><p class="op-small">One society-wide strategy built around specific long-term goals, expressed through knowledge streams.</p></div>
+      <div><p class="op-num">03</p><h3>Governance</h3><p class="op-small">Clear expectations for team leads, defined review standards, regular communication between committee and leads, and funding conditional on agreed success criteria.</p></div>
+      <div><p class="op-num">04</p><h3>Profile and partnerships</h3><p class="op-small">One brand and one set of channels, with a society-level sponsor and funding pipeline run by new Media and Crowdfunding teams.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Project portfolio</h2>
+    <table>
+      <thead><tr><th scope="col">Tier</th><th scope="col">Budget</th><th scope="col">Expectations</th><th scope="col">Reporting</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Flagship<span>HPR · SUEP</span></th><td data-label="Budget">Largest amounts; longer-term plans expected</td><td data-label="Expectations">Highest social media output; own sponsor-seeking</td><td data-label="Reporting">Full internal design review set; monthly written status</td></tr>
+        <tr><th scope="row">Experimental<span>Starworks · Ceres</span></th><td data-label="Budget">Depends on project phase; high scrutiny on spending</td><td data-label="Expectations">Some sponsor-seeking; agree success criteria with committee</td><td data-label="Reporting">Flexible internal design reviews; monthly written status</td></tr>
+        <tr><th scope="row">Competition<span>Mars Rover · CubeSat</span></th><td data-label="Budget">Tied to competition requirements; usually lower</td><td data-label="Expectations">Sponsor-seeking encouraged, not expected</td><td data-label="Reporting">Reviews usually external to the competition; monthly written status</td></tr>
+      </tbody>
+    </table>
+    <p class="op-note">The tiers organise how we present the society and how we run it internally. They do not rank the teams.</p>
+  </section>
+
+  <section>
+    <h2>Knowledge streams</h2>
+    <ul class="op-streams">
+      <li>Propulsion</li><li>Vehicle</li><li>Avionics · GNC · FSW</li><li>Test · Qualification · Safety</li>
+    </ul>
+    <p class="op-small">Every project maps onto these streams. Together they show the capability we are building and where we are thin, which focuses recruitment and teaching, and lets us assess a new project proposal by the gap it fills.</p>
+  </section>
+
+  <section>
+    <h2>This year's focus</h2>
+    <ul class="op-small">
+      <li>Governance and strategy are the core aims.</li>
+      <li>Every project has clear success criteria, and its funding depends on them.</li>
+      <li>Every team reports its progress, or lack of it, regularly.</li>
+      <li>Stronger links between teams, through recurring socials and whole-society events.</li>
+    </ul>
+  </section>
+
+  <p class="op-sign">Diego F. Paniagua Silva · Head of Projects, SUSF · Oct 2026</p>
+</main>
+</body>
+</html>
