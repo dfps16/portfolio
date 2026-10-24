@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-10-24d">
+  <link rel="stylesheet" href="styles.css?v=2026-10-24g">
 </head>
 <body>
 
@@ -255,107 +255,27 @@
       <div class="ledger">
         <div class="ledger-head"><span>When</span><span>Project</span><span>Status</span><span></span></div>
 
-        <!-- Scorpio 3 -->
-        <details class="row" id="scorpio">
+        <!-- RelNav -->
+        <details class="row" id="relnav">
           <summary>
-            <span class="when">Oct 2024 – Jun 2025</span>
+            <span class="when">Personal</span>
             <div>
-              <h3>Scorpio 3 pintle injector</h3>
-              <span class="hook">I led the sub-team that designed and partly machined the injector for SU Liquid Rocket Engine's 2.5 kN engine. It hot-fired successfully and now powers SUSF's first liquid launch attempt.</span>
+              <h3>Relative navigation for a chaser spacecraft in LEO</h3>
+              <span class="hook">A spacecraft trying to meet another in orbit has to work out where its target is from noisy distance and angle measurements. This project builds the filter that does it.</span>
             </div>
-            <span class="status ok">Done</span>
+            <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>My role</dt><dd>Led a sub-team of four engineers in the SU Liquid Rocket Engine team.</dd></div>
-              <div><dt>Design</dt><dd>A 2.5 kN IPA/N₂O pintle injector for a pressure-fed bipropellant engine. CAD in SolidWorks, hand calculations in Excel, and part of it machined by us on a manual mill and lathe.</dd></div>
-              <div><dt>Result</dt><dd>Hot-fired successfully in March 2026 at Newton Launch Systems. It now powers SUSF's first liquid launch attempt, planned for Q1 2027.</dd></div>
-              <div><dt>Media</dt><dd>
-                <div class="photos two media-stack">
-                  <figure><a href="assets/scorpio/engine-section.webp"><img src="assets/scorpio/engine-section.webp" alt="CAD of the Scorpio 3 engine, exterior and cut-away section showing the pintle injector, chamber and nozzle" width="1355" height="1350" loading="lazy"></a><figcaption>Scorpio 3 engine with the injector fitted: exterior and section view</figcaption></figure>
-                  <figure><a href="assets/scorpio/injector-fea.jpg"><img src="assets/scorpio/injector-fea.jpg" alt="Von Mises stress plots of the injector's top-mid and mid-bottom plates, with stress concentrated at the bolt holes" width="612" height="1145" loading="lazy"></a><figcaption>Injector FEA: von Mises stress in the top-mid and mid-bottom plates</figcaption></figure>
-                  <figure class="video">
-                    <video controls playsinline preload="metadata" poster="assets/scorpio/hot-fire-poster.jpg" width="480" height="480">
-                      <source src="assets/scorpio/hot-fire.mp4" type="video/mp4">
-                    </video>
-                    <figcaption>Comet-1 hot fire with the Scorpio 3 engine. Apologies for the low quality: I'm trying to track down the higher quality video. You can see it <a href="https://www.linkedin.com/pulse/behind-scenes-sulre-full-stack-hot-fire-liquid-rocket-ben-busschaert-udyle/" target="_blank" rel="noopener">here</a>.</figcaption>
-                  </figure>
-                </div>
+              <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
+              <div><dt>Method</dt><dd>Clohessy–Wiltshire dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An extended Kalman filter written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (NEES and NIS inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
+              <div><dt>Stack &amp; code</dt><dd>
+                <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
+                <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
               </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>SolidWorks</li><li>Excel</li><li>Manual machining</li></ul></dd></div>
-            </dl>
-          </div>
-        </details>
-
-        <!-- Sverd -->
-        <details class="row" id="sverd">
-          <summary>
-            <span class="when">Spring 2025</span>
-            <div>
-              <h3>Sverd liquid rocket engine</h3>
-              <span class="hook">I manufactured key parts of Sverd, a 3D-printed regeneratively cooled engine, and was on the team that hot-fired it at Race 2 Space 2025.</span>
-            </div>
-            <span class="status ok">Done</span>
-            <span class="fold" aria-hidden="true"></span>
-          </summary>
-          <div class="row-body">
-            <dl class="sections">
-              <div><dt>Context</dt><dd>SULRE (SU Liquid Rocket Engine), the team behind the Comet-1 rocket, split in two: one group building Comet-1, the other taking the Sverd engine to Race 2 Space. I was technically on the Comet-1 team, working on the <a href="#scorpio">Scorpio 3</a> engine, but was asked to help with Sverd.</dd></div>
-              <div><dt>My role</dt><dd>Manufactured the igniter cartridge and the pressure sensor cartridge, in semester 2 of 2024–25, and was part of the testing team at Race 2 Space 2025.</dd></div>
-              <div><dt>Legacy</dt><dd>As a 3D-printed, regeneratively cooled engine, Sverd is the spiritual predecessor of <a href="#starworks">Starworks</a>' Banshee engine.</dd></div>
-              <div><dt>Media</dt><dd>
-                <div class="photos natural">
-                  <figure><a href="assets/sverd/hot-fire.jpg"><img src="assets/sverd/hot-fire.jpg" alt="The Sverd engine firing on a test stand, with a blue exhaust plume with shock diamonds" width="1280" height="720" loading="lazy"></a><figcaption>Hot fire at Race 2 Space 2025</figcaption></figure>
-                  <figure><a href="assets/sverd/engine.jpg"><img src="assets/sverd/engine.jpg" alt="The assembled Sverd engine with its injector head and fittings" width="960" height="1280" loading="lazy"></a><figcaption>The assembled Sverd engine</figcaption></figure>
-                  <figure><a href="assets/sverd/chamber.jpg"><img src="assets/sverd/chamber.jpg" alt="View down the inside of the engine towards the lit throat" width="960" height="1280" loading="lazy"></a><figcaption>Looking down the inside of the engine</figcaption></figure>
-                </div>
-              </dd></div>
-            </dl>
-          </div>
-        </details>
-
-        <!-- Rion Imaging -->
-        <details class="row" id="rion">
-          <summary>
-            <span class="when">Oct 2025 – Feb 2026</span>
-            <div>
-              <h3>Rion Imaging: Airbus Space Competition</h3>
-              <span class="hook">I led a team of five designing a lunar imaging startup: a 34-CubeSat constellation for near-real time images of most of the lunar surface. We reached the finals and were invited to present at Airbus Stevenage.</span>
-            </div>
-            <span class="status ok">Done</span>
-            <span class="fold" aria-hidden="true"></span>
-          </summary>
-          <div class="row-body">
-            <dl class="sections">
-              <div><dt>My role</dt><dd>As team lead I coordinated the business case and technical work, I also carried out the market sizing myself and set mission requirements in line with our business goals.</dd></div>
-              <div><dt>Concept</dt><dd>30 imaging and 4 relay 2U CubeSats in lunar orbit. The imaging layer flies at 350 km and the support layer at 100 km, at the 93° inclination selected from our GMAT trade study, with planes evenly spaced in RAAN to avoid coverage clustering, for 99% lunar coverage. The business case sized a £1.17B annual addressable market in 2045, with £69.5M of non-recurring cost covered by a £77M three-phase funding plan.</dd></div>
-              <div><dt>Feedback</dt><dd>Before the final, reviewers pointed out that our Walker design based on preliminary hand calcs ignored lunar rotation, so we replaced it with a full constellation design in GMAT using its lunar gravity model and rotation. At the final, the judges found the realistic customer base too small: our estimate of lunar settlement was too large to justify near live imaging of such a large portion of the lunar surface.</dd></div>
-              <div><dt>Lesson</dt><dd>Business concepts should start with what the market needs, from a customer base rather than a cool concept. I would later learn in the UKSEDS Space Entrepreneurship programme that this is called a demand pull instead of a technology push.</dd></div>
-              <div><dt>Team</dt><dd>
-                <div class="photos two natural">
-                  <figure><a href="assets/rion/finals-team.jpg"><img src="assets/rion/finals-team.jpg" alt="The five-person Rion Imaging team in front of the Airbus Space Competition 2025/26 title screen" width="1400" height="936" loading="lazy"></a><figcaption>Finals day at Airbus Stevenage</figcaption></figure>
-                  <figure><a href="assets/rion/prep-day.jpg"><img src="assets/rion/prep-day.jpg" alt="Four team members working on laptops around a table the day before the final" width="1400" height="788" loading="lazy"></a><figcaption>Preparing the day before the final</figcaption></figure>
-                </div>
-              </dd></div>
-              <div><dt>GMAT trade study</dt><dd>
-                <div class="photos two natural">
-                  <figure><a href="assets/rion/gmat-ecc-vs-inc.png"><img src="assets/rion/gmat-ecc-vs-inc.png" alt="Scatter plot of maximum eccentricity over 180 days against inclination from 86 to 94 degrees at 250 km" width="1526" height="921" loading="lazy"></a><figcaption>Maximum eccentricity over 180 days vs inclination (250 km)</figcaption></figure>
-                  <figure><a href="assets/rion/gmat-sma-vs-inc.png"><img src="assets/rion/gmat-sma-vs-inc.png" alt="Line plot of net semi-major axis change over 180 days against inclination at 250 km, crossing zero near 91 degrees" width="1596" height="943" loading="lazy"></a><figcaption>Net SMA change over 180 days vs inclination (250 km)</figcaption></figure>
-                  <figure><a href="assets/rion/gmat-sma-vs-alt.png"><img src="assets/rion/gmat-sma-vs-alt.png" alt="Scatter plot of peak-to-peak SMA drift over 180 days against orbital altitude from 150 to 350 km" width="1478" height="854" loading="lazy"></a><figcaption>Peak-to-peak SMA drift over 180 days vs altitude</figcaption></figure>
-                  <figure><a href="assets/rion/gmat-ecc-vs-alt.png"><img src="assets/rion/gmat-ecc-vs-alt.png" alt="Scatter plot of maximum eccentricity over 180 days against orbital altitude from 150 to 350 km" width="1661" height="937" loading="lazy"></a><figcaption>Maximum eccentricity over 180 days vs altitude</figcaption></figure>
-                </div>
-              </dd></div>
-              <div><dt>Documents</dt><dd>
-                <ul class="docs">
-                  <li><a href="assets/rion/rion-finals-deck.pptx" download>Finals presentation</a> <span class="note">PowerPoint, 1.1 MB, final design</span></li>
-                  <li><a href="assets/rion/rion-technical-report.pdf">Technical report</a> <span class="note">PDF, 5 pages, February 2026 submission</span></li>
-                  <li><a href="assets/rion/rion-technical-appendix.pdf">Technical appendix</a> <span class="note">PDF, 2 pages: coverage and swath calculations</span></li>
-                  <li><a href="assets/rion/rion-business-report.pdf">Business report</a> <span class="note">PDF, 4 pages, February 2026 submission</span></li>
-                </ul>
-                <p class="note">The February reports describe the design before the final (24 satellites at 250 km); the finals deck shows the redesign above.</p>
-              </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>NASA GMAT</li><li>Excel</li><li>LaTeX</li></ul></dd></div>
+              <div><dt>What I learnt so far</dt><dd>Frame and sign conventions are where these projects go wrong, so I validated them on the bounded relative-motion ellipse before writing any filter. An error plot can't tell you whether a filter is well tuned; consistency tests can.</dd></div>
+              <div><dt>What's next</dt><dd>Feeding the estimate into a rendezvous controller, to close the full guidance, navigation and control loop.</dd></div>
             </dl>
           </div>
         </details>
@@ -399,31 +319,6 @@
               </dd></div>
               <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
               <div><dt>What's next</dt><dd>Active development is now in the hands of the Starworks flight dynamics team, where this sim has become a core tool.</dd></div>
-            </dl>
-          </div>
-        </details>
-
-        <!-- RelNav -->
-        <details class="row" id="relnav">
-          <summary>
-            <span class="when">Personal</span>
-            <div>
-              <h3>Relative navigation for a chaser spacecraft in LEO</h3>
-              <span class="hook">A spacecraft trying to meet another in orbit has to work out where its target is from noisy distance and angle measurements. This project builds the filter that does it.</span>
-            </div>
-            <span class="status warn">In progress</span>
-            <span class="fold" aria-hidden="true"></span>
-          </summary>
-          <div class="row-body">
-            <dl class="sections">
-              <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
-              <div><dt>Method</dt><dd>Clohessy–Wiltshire dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An extended Kalman filter written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (NEES and NIS inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
-              <div><dt>Stack &amp; code</dt><dd>
-                <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
-                <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
-              </dd></div>
-              <div><dt>What I learnt so far</dt><dd>Frame and sign conventions are where these projects go wrong, so I validated them on the bounded relative-motion ellipse before writing any filter. An error plot can't tell you whether a filter is well tuned; consistency tests can.</dd></div>
-              <div><dt>What's next</dt><dd>Feeding the estimate into a rendezvous controller, to close the full guidance, navigation and control loop.</dd></div>
             </dl>
           </div>
         </details>
@@ -490,6 +385,78 @@
           </div>
         </details>
 
+        <!-- Rion Imaging -->
+        <details class="row" id="rion">
+          <summary>
+            <span class="when">Oct 2025 – Feb 2026</span>
+            <div>
+              <h3>Rion Imaging: Airbus Space Competition</h3>
+              <span class="hook">I led a team of five designing a lunar imaging startup: a 34-CubeSat constellation for near-real time images of most of the lunar surface. We reached the finals and were invited to present at Airbus Stevenage.</span>
+            </div>
+            <span class="status ok">Done</span>
+            <span class="fold" aria-hidden="true"></span>
+          </summary>
+          <div class="row-body">
+            <dl class="sections">
+              <div><dt>My role</dt><dd>As team lead I coordinated the business case and technical work, I also carried out the market sizing myself and set mission requirements in line with our business goals.</dd></div>
+              <div><dt>Concept</dt><dd>30 imaging and 4 relay 2U CubeSats in lunar orbit. The imaging layer flies at 350 km and the support layer at 100 km, at the 93° inclination selected from our GMAT trade study, with planes evenly spaced in RAAN to avoid coverage clustering, for 99% lunar coverage. The business case sized a £1.17B annual addressable market in 2045, with £69.5M of non-recurring cost covered by a £77M three-phase funding plan.</dd></div>
+              <div><dt>Feedback</dt><dd>Before the final, reviewers pointed out that our Walker design based on preliminary hand calcs ignored lunar rotation, so we replaced it with a full constellation design in GMAT using its lunar gravity model and rotation. At the final, the judges found the realistic customer base too small: our estimate of lunar settlement was too large to justify near live imaging of such a large portion of the lunar surface.</dd></div>
+              <div><dt>Lesson</dt><dd>Business concepts should start with what the market needs, from a customer base rather than a cool concept. I would later learn in the UKSEDS Space Entrepreneurship programme that this is called a demand pull instead of a technology push.</dd></div>
+              <div><dt>Team</dt><dd>
+                <div class="photos two natural">
+                  <figure><a href="assets/rion/finals-team.jpg"><img src="assets/rion/finals-team.jpg" alt="The five-person Rion Imaging team in front of the Airbus Space Competition 2025/26 title screen" width="1400" height="936" loading="lazy"></a><figcaption>Finals day at Airbus Stevenage</figcaption></figure>
+                  <figure><a href="assets/rion/prep-day.jpg"><img src="assets/rion/prep-day.jpg" alt="Four team members working on laptops around a table the day before the final" width="1400" height="788" loading="lazy"></a><figcaption>Preparing the day before the final</figcaption></figure>
+                </div>
+              </dd></div>
+              <div><dt>GMAT trade study</dt><dd>
+                <div class="photos two natural">
+                  <figure><a href="assets/rion/gmat-ecc-vs-inc.png"><img src="assets/rion/gmat-ecc-vs-inc.png" alt="Scatter plot of maximum eccentricity over 180 days against inclination from 86 to 94 degrees at 250 km" width="1526" height="921" loading="lazy"></a><figcaption>Maximum eccentricity over 180 days vs inclination (250 km)</figcaption></figure>
+                  <figure><a href="assets/rion/gmat-sma-vs-inc.png"><img src="assets/rion/gmat-sma-vs-inc.png" alt="Line plot of net semi-major axis change over 180 days against inclination at 250 km, crossing zero near 91 degrees" width="1596" height="943" loading="lazy"></a><figcaption>Net SMA change over 180 days vs inclination (250 km)</figcaption></figure>
+                  <figure><a href="assets/rion/gmat-sma-vs-alt.png"><img src="assets/rion/gmat-sma-vs-alt.png" alt="Scatter plot of peak-to-peak SMA drift over 180 days against orbital altitude from 150 to 350 km" width="1478" height="854" loading="lazy"></a><figcaption>Peak-to-peak SMA drift over 180 days vs altitude</figcaption></figure>
+                  <figure><a href="assets/rion/gmat-ecc-vs-alt.png"><img src="assets/rion/gmat-ecc-vs-alt.png" alt="Scatter plot of maximum eccentricity over 180 days against orbital altitude from 150 to 350 km" width="1661" height="937" loading="lazy"></a><figcaption>Maximum eccentricity over 180 days vs altitude</figcaption></figure>
+                </div>
+              </dd></div>
+              <div><dt>Documents</dt><dd>
+                <ul class="docs">
+                  <li><a href="assets/rion/rion-finals-deck.pptx" download>Finals presentation</a> <span class="note">PowerPoint, 1.1 MB, final design</span></li>
+                  <li><a href="assets/rion/rion-technical-report.pdf">Technical report</a> <span class="note">PDF, 5 pages, February 2026 submission</span></li>
+                  <li><a href="assets/rion/rion-technical-appendix.pdf">Technical appendix</a> <span class="note">PDF, 2 pages: coverage and swath calculations</span></li>
+                  <li><a href="assets/rion/rion-business-report.pdf">Business report</a> <span class="note">PDF, 4 pages, February 2026 submission</span></li>
+                </ul>
+                <p class="note">The February reports describe the design before the final (24 satellites at 250 km); the finals deck shows the redesign above.</p>
+              </dd></div>
+              <div><dt>Skills</dt><dd><ul class="tags"><li>NASA GMAT</li><li>Excel</li><li>LaTeX</li></ul></dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <!-- Sverd -->
+        <details class="row" id="sverd">
+          <summary>
+            <span class="when">Spring 2025</span>
+            <div>
+              <h3>Sverd liquid rocket engine</h3>
+              <span class="hook">I manufactured key parts of Sverd, a 3D-printed regeneratively cooled engine, and was on the team that hot-fired it at Race 2 Space 2025.</span>
+            </div>
+            <span class="status ok">Done</span>
+            <span class="fold" aria-hidden="true"></span>
+          </summary>
+          <div class="row-body">
+            <dl class="sections">
+              <div><dt>Context</dt><dd>SULRE (SU Liquid Rocket Engine), the team behind the Comet-1 rocket, split in two: one group building Comet-1, the other taking the Sverd engine to Race 2 Space. I was technically on the Comet-1 team, working on the <a href="#scorpio">Scorpio 3</a> engine, but was asked to help with Sverd.</dd></div>
+              <div><dt>My role</dt><dd>Manufactured the igniter cartridge and the pressure sensor cartridge, in semester 2 of 2024–25, and was part of the testing team at Race 2 Space 2025.</dd></div>
+              <div><dt>Legacy</dt><dd>As a 3D-printed, regeneratively cooled engine, Sverd is the spiritual predecessor of <a href="#starworks">Starworks</a>' Banshee engine.</dd></div>
+              <div><dt>Media</dt><dd>
+                <div class="photos natural">
+                  <figure><a href="assets/sverd/hot-fire.jpg"><img src="assets/sverd/hot-fire.jpg" alt="The Sverd engine firing on a test stand, with a blue exhaust plume with shock diamonds" width="1280" height="720" loading="lazy"></a><figcaption>Hot fire at Race 2 Space 2025</figcaption></figure>
+                  <figure><a href="assets/sverd/engine.jpg"><img src="assets/sverd/engine.jpg" alt="The assembled Sverd engine with its injector head and fittings" width="960" height="1280" loading="lazy"></a><figcaption>The assembled Sverd engine</figcaption></figure>
+                  <figure><a href="assets/sverd/chamber.jpg"><img src="assets/sverd/chamber.jpg" alt="View down the inside of the engine towards the lit throat" width="960" height="1280" loading="lazy"></a><figcaption>Looking down the inside of the engine</figcaption></figure>
+                </div>
+              </dd></div>
+            </dl>
+          </div>
+        </details>
+
         <!-- WAU Holdings -->
         <details class="row" id="wau">
           <summary>
@@ -506,6 +473,39 @@
               <div><dt>What I did</dt><dd>Early-stage design of the regenerative cooling jacket for a &gt;30 kN methalox engine, using analytical thermal models in Python and RPA. Also wrote CONOPS and PFMEA documentation. From April 2025 I was <a href="#wau-lead">team lead</a>.</dd></div>
               <div><dt>Notes</dt><dd>Figures are under NDA, and the company is now defunct. It started the same month I founded Starworks, so I worked on both in parallel.</dd></div>
               <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>RPA</li><li>Thermal analysis</li></ul></dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <!-- Scorpio 3 -->
+        <details class="row" id="scorpio">
+          <summary>
+            <span class="when">Oct 2024 – Jun 2025</span>
+            <div>
+              <h3>Scorpio 3 pintle injector</h3>
+              <span class="hook">I led the sub-team that designed and partly machined the injector for SU Liquid Rocket Engine's 2.5 kN engine. It hot-fired successfully and now powers SUSF's first liquid launch attempt.</span>
+            </div>
+            <span class="status ok">Done</span>
+            <span class="fold" aria-hidden="true"></span>
+          </summary>
+          <div class="row-body">
+            <dl class="sections">
+              <div><dt>My role</dt><dd>Led a sub-team of four engineers in the SU Liquid Rocket Engine team.</dd></div>
+              <div><dt>Design</dt><dd>A 2.5 kN IPA/N₂O pintle injector for a pressure-fed bipropellant engine. CAD in SolidWorks, hand calculations in Excel, and part of it machined by us on a manual mill and lathe.</dd></div>
+              <div><dt>Result</dt><dd>Hot-fired successfully in March 2026 at Newton Launch Systems. It now powers SUSF's first liquid launch attempt, planned for Q1 2027.</dd></div>
+              <div><dt>Media</dt><dd>
+                <div class="photos two media-stack">
+                  <figure><a href="assets/scorpio/engine-section.webp"><img src="assets/scorpio/engine-section.webp" alt="CAD of the Scorpio 3 engine, exterior and cut-away section showing the pintle injector, chamber and nozzle" width="1355" height="1350" loading="lazy"></a><figcaption>Scorpio 3 engine with the injector fitted: exterior and section view</figcaption></figure>
+                  <figure><a href="assets/scorpio/injector-fea.jpg"><img src="assets/scorpio/injector-fea.jpg" alt="Von Mises stress plots of the injector's top-mid and mid-bottom plates, with stress concentrated at the bolt holes" width="612" height="1145" loading="lazy"></a><figcaption>Injector FEA: von Mises stress in the top-mid and mid-bottom plates</figcaption></figure>
+                  <figure class="video">
+                    <video controls playsinline preload="metadata" poster="assets/scorpio/hot-fire-poster.jpg" width="480" height="480">
+                      <source src="assets/scorpio/hot-fire.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>Comet-1 hot fire with the Scorpio 3 engine. Apologies for the low quality: I'm trying to track down the higher quality video. You can see it <a href="https://www.linkedin.com/pulse/behind-scenes-sulre-full-stack-hot-fire-liquid-rocket-ben-busschaert-udyle/" target="_blank" rel="noopener">here</a>.</figcaption>
+                  </figure>
+                </div>
+              </dd></div>
+              <div><dt>Skills</dt><dd><ul class="tags"><li>SolidWorks</li><li>Excel</li><li>Manual machining</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -539,27 +539,6 @@
       <div class="ledger">
         <div class="ledger-head"><span>When</span><span>Role</span><span>Status</span><span></span></div>
 
-        <!-- Head of Projects -->
-        <details class="row" id="head-of-projects">
-          <summary>
-            <span class="when">May 2026 –</span>
-            <div>
-              <h3>Head of Projects, SUSF</h3>
-              <span class="hook">Society membership grew from ~150 to 260+ largely thanks to our large project selection, this year our teams entered a record five national competitions and are attempting new exciting milestones.</span>
-            </div>
-            <span class="status warn">In progress</span>
-            <span class="fold" aria-hidden="true"></span>
-          </summary>
-          <div class="row-body">
-            <dl class="sections">
-              <div><dt>Portfolio</dt><dd>Eight teams, including two new teams I brought on board, and an annual budget of £12k+.</dd></div>
-              <div><dt>What I set up</dt><dd>A tiered funding model (flagship, experimental, competition), adopted by the society. A shared compendium, SharePoint and GitHub organisation used by all teams. A Team Lead Code of Conduct, adopted society-wide.</dd></div>
-              <div><dt>Strategy</dt><dd>Presented the society's strategy to the faculty and the committee. <a href="strategy.html">Read the one-page summary →</a></dd></div>
-              <div><dt>Link</dt><dd><a class="repo" href="https://github.com/SU-Spaceflight">github.com/SU-Spaceflight →</a></dd></div>
-            </dl>
-          </div>
-        </details>
-
         <!-- Project Stardust -->
         <details class="row" id="stardust">
           <summary>
@@ -585,19 +564,24 @@
           </div>
         </details>
 
-        <!-- Starworks: cross-link -->
-        <details class="row" id="starworks-lead">
+        <!-- Head of Projects -->
+        <details class="row" id="head-of-projects">
           <summary>
-            <span class="when">Jan 2025 –</span>
+            <span class="when">May 2026 –</span>
             <div>
-              <h3>Founder &amp; Lead, Starworks</h3>
-              <span class="hook">From founding to ~50 members, an engine design review and a $3,000 grant.</span>
+              <h3>Head of Projects, SUSF</h3>
+              <span class="hook">Society membership grew from ~150 to 260+ largely thanks to our large project selection, this year our teams entered a record five national competitions and are attempting new exciting milestones.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
-            <p class="xlink">The full story is in the flagship section: <a href="#starworks">Starworks →</a></p>
+            <dl class="sections">
+              <div><dt>Portfolio</dt><dd>Eight teams, including two new teams I brought on board, and an annual budget of £12k+.</dd></div>
+              <div><dt>What I set up</dt><dd>A tiered funding model (flagship, experimental, competition), adopted by the society. A shared compendium, SharePoint and GitHub organisation used by all teams. A Team Lead Code of Conduct, adopted society-wide.</dd></div>
+              <div><dt>Strategy</dt><dd>Presented the society's strategy to the faculty and the committee. <a href="strategy.html">Read the one-page summary →</a></dd></div>
+              <div><dt>Link</dt><dd><a class="repo" href="https://github.com/SU-Spaceflight">github.com/SU-Spaceflight →</a></dd></div>
+            </dl>
           </div>
         </details>
 
@@ -614,6 +598,22 @@
           </summary>
           <div class="row-body">
             <p class="xlink">The engineering work is in <a href="#wau">Regenerative cooling at WAU Holdings →</a></p>
+          </div>
+        </details>
+
+        <!-- Starworks: cross-link -->
+        <details class="row" id="starworks-lead">
+          <summary>
+            <span class="when">Jan 2025 –</span>
+            <div>
+              <h3>Founder &amp; Lead, Starworks</h3>
+              <span class="hook">From founding to ~50 members, an engine design review and a $3,000 grant.</span>
+            </div>
+            <span class="status warn">In progress</span>
+            <span class="fold" aria-hidden="true"></span>
+          </summary>
+          <div class="row-body">
+            <p class="xlink">The full story is in the flagship section: <a href="#starworks">Starworks →</a></p>
           </div>
         </details>
       </div>
@@ -637,58 +637,32 @@
            To add one to another entry, copy a <figure class="thumb"> into that <li>. -->
       <div class="years">
         <details class="year">
-          <summary><span class="year-label">2024</span><span class="year-count">3 entries</span><span class="fold" aria-hidden="true"></span></summary>
+          <summary><span class="year-label">Upcoming</span><span class="year-count">5 entries</span><span class="fold" aria-hidden="true"></span></summary>
           <ol class="journey">
-            <li>
-              <p class="when">May 2024</p>
-              <h3>Extended Essay: could asteroid mining pay?</h3>
-              <p>For my IB Extended Essay, I assessed the feasibility of an asteroid mining business, from both the market and the technical side.</p>
+            <li class="upcoming milestone">
+              <p class="when">Jun 2027</p>
+              <h3>BEng graduation</h3>
+              <p>Graduating from the University of Southampton.</p>
             </li>
-            <li>
-              <p class="when">Sep 2024</p>
-              <h3>Southampton, and straight into SUSF</h3>
-              <p>Started my degree and joined the Southampton University Spaceflight Society in my first weeks.</p>
+            <li class="upcoming">
+              <p class="when">Jun 2027</p>
+              <h3>UKSEDS Satellite Design Competition finals</h3>
+              <p>Hoping to reach the finals with the <a href="#stardust">CubeSat team</a>.</p>
             </li>
-            <li>
-              <p class="when">Oct 2024</p>
-              <h3>Joined the SU Liquid Rocket Engine team</h3>
-              <p>Where I went on to lead the <a href="#scorpio">Scorpio 3 injector</a> sub-team.</p>
+            <li class="upcoming">
+              <p class="when">Q1 2027</p>
+              <h3>SUSF's first liquid launch attempt</h3>
+              <p>Upcoming, powered by <a href="#scorpio">Scorpio 3</a>.</p>
             </li>
-          </ol>
-        </details>
-        <details class="year">
-          <summary><span class="year-label">2025</span><span class="year-count">6 entries</span><span class="fold" aria-hidden="true"></span></summary>
-          <ol class="journey">
-            <li>
-              <p class="when">Jan 2025</p>
-              <h3>Founded Starworks; started at WAU Holdings</h3>
-              <p>Two new commitments in the same month: <a href="#starworks">Starworks</a> and <a href="#wau">WAU Holdings</a>.</p>
+            <li class="upcoming">
+              <p class="when">Q1 2027</p>
+              <h3>Banshee hot fire</h3>
+              <p>The first hot fire of <a href="#starworks">Starworks</a>' Banshee engine, hopefully on our own test stand.</p>
             </li>
-            <li>
-              <p class="when">19–20 Mar 2025</p>
-              <h3>Farnborough International Space Show</h3>
-              <p>Met Fabrizio Pisani and Pedro Rodríguez López, founders of Meta Future and Southampton graduates, and had great conversations about how to run Starworks.</p>
-            </li>
-            <li>
-              <p class="when">Jun 2025</p>
-              <h3>Northrop Grumman challenge</h3>
-              <p>Presented to a panel of Northrop Grumman employee judges.</p>
-            </li>
-            <li>
-              <p class="when">Summer 2025</p>
-              <h3>Race 2 Space 2025</h3>
-              <p>On the testing team that hot-fired the Sverd liquid rocket engine, for which I manufactured the igniter and pressure sensor cartridges. <a href="#sverd">See the project →</a></p>
-            </li>
-            <li>
-              <p class="when">Summer 2025</p>
-              <h3>Two certificates</h3>
-              <p>Space mission design with EPFLx, and space hardware testing with Plastron UK. Both are displayed on my <a href="https://www.linkedin.com/in/dfps16/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-            </li>
-            <li>
-              <p class="when">Oct 2025 – Feb 2026</p>
-              <h3>Airbus Space Competition</h3>
-              <p>Reached the finals with <a href="#rion">Rion Imaging</a>.</p>
-              <figure class="thumb"><img src="assets/journey/airbus-finals.jpg" alt="Team Rion Imaging at the Airbus Space Competition finals" onerror="this.parentNode.remove()"><figcaption>Finals day, Airbus Stevenage</figcaption></figure>
+            <li class="upcoming">
+              <p class="when">Feb 2027</p>
+              <h3>Airbus Space Design Competition finals, again</h3>
+              <p>Hoping to reach the finals again, building on what <a href="#rion">RION</a> taught us.</p>
             </li>
           </ol>
         </details>
@@ -696,39 +670,19 @@
           <summary><span class="year-label">2026</span><span class="year-count">11 entries</span><span class="fold" aria-hidden="true"></span></summary>
           <ol class="journey">
             <li>
-              <p class="when">4–5 Mar 2026</p>
-              <h3>Space-Comm Expo, ExCeL London</h3>
-              <p>Attended the UK's space industry expo.</p>
+              <p class="when">17–18 Oct 2026</p>
+              <h3>UKSEDS Space Entrepreneurship Programme, Edinburgh</h3>
+              <p>Selected for the programme. In randomly assigned teams, ours won the pitching competition with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva. <span class="todo">To confirm: judges' names against the programme</span></p>
             </li>
             <li>
-              <p class="when">11 Mar 2026</p>
-              <h3>RAeS Weapon Systems &amp; Capability Conference</h3>
-              <p>"The Need For A Revolution In Managing Risk, Cost And Time", at the Royal Aeronautical Society headquarters, London.</p>
+              <p class="when">15–17 Sep 2026</p>
+              <h3>MMAT poster at UKEO 2026</h3>
+              <p>My Magdrive work was presented as a poster at UKEO 2026, University of Warwick.</p>
             </li>
             <li>
-              <p class="when">Mar 2026</p>
-              <h3>Selected for UKSA Skills for Space</h3>
-              <p>One of ~50 places from more than 1,000 applicants, which led to my <a href="#magdrive">Magdrive internship</a>.</p>
-            </li>
-            <li>
-              <p class="when">Mar 2026</p>
-              <h3>Scorpio 3 hot fire</h3>
-              <p>The injector I worked on fired successfully at Newton Launch Systems.</p>
-            </li>
-            <li>
-              <p class="when">Mar – Jun 2026</p>
-              <h3>Writer, European Defense Tech Hub</h3>
-              <p>A main article on Luch-2 / Olymp-K-2, plus around twelve newsletters. <span class="todo">To add: article link and newsletter numbers</span></p>
-            </li>
-            <li>
-              <p class="when">May 2026</p>
-              <h3>Head of Projects, SUSF</h3>
-              <p>Took over the society's project portfolio. <a href="#head-of-projects">See the role →</a></p>
-            </li>
-            <li>
-              <p class="when">Jul – Aug 2026</p>
-              <h3>Magdrive internship</h3>
-              <p>Built <a href="#magdrive">MMAT</a>, the company's mission analysis tool.</p>
+              <p class="when">Sep 2026</p>
+              <h3>Deputy Team Lead, Project Stardust</h3>
+              <p>Joined the leadership of SUSF's CubeSat team. <a href="#stardust">See the role →</a></p>
             </li>
             <li>
               <p class="when">18–19 Jul 2026</p>
@@ -737,49 +691,95 @@
               <figure class="thumb"><img src="assets/journey/esgw-london.jpg" alt="At the European Space Generation Workshop in London" onerror="this.parentNode.remove()"><figcaption>E-SGW 2026, London</figcaption></figure>
             </li>
             <li>
-              <p class="when">Sep 2026</p>
-              <h3>Deputy Team Lead, Project Stardust</h3>
-              <p>Joined the leadership of SUSF's CubeSat team. <a href="#stardust">See the role →</a></p>
+              <p class="when">Jul – Aug 2026</p>
+              <h3>Magdrive internship</h3>
+              <p>Built <a href="#magdrive">MMAT</a>, the company's mission analysis tool.</p>
             </li>
             <li>
-              <p class="when">15–17 Sep 2026</p>
-              <h3>MMAT poster at UKEO 2026</h3>
-              <p>My Magdrive work was presented as a poster at UKEO 2026, University of Warwick.</p>
+              <p class="when">May 2026</p>
+              <h3>Head of Projects, SUSF</h3>
+              <p>Took over the society's project portfolio. <a href="#head-of-projects">See the role →</a></p>
             </li>
             <li>
-              <p class="when">17–18 Oct 2026</p>
-              <h3>UKSEDS Space Entrepreneurship Programme, Edinburgh</h3>
-              <p>Selected for the programme. In randomly assigned teams, ours won the pitching competition with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva. <span class="todo">To confirm: judges' names against the programme</span></p>
+              <p class="when">Mar – Jun 2026</p>
+              <h3>Writer, European Defense Tech Hub</h3>
+              <p>A main article on Luch-2 / Olymp-K-2, plus around twelve newsletters. <span class="todo">To add: article link and newsletter numbers</span></p>
+            </li>
+            <li>
+              <p class="when">Mar 2026</p>
+              <h3>Scorpio 3 hot fire</h3>
+              <p>The injector I worked on fired successfully at Newton Launch Systems.</p>
+            </li>
+            <li>
+              <p class="when">Mar 2026</p>
+              <h3>Selected for UKSA Skills for Space</h3>
+              <p>One of ~50 places from more than 1,000 applicants, which led to my <a href="#magdrive">Magdrive internship</a>.</p>
+            </li>
+            <li>
+              <p class="when">11 Mar 2026</p>
+              <h3>RAeS Weapon Systems &amp; Capability Conference</h3>
+              <p>"The Need For A Revolution In Managing Risk, Cost And Time", at the Royal Aeronautical Society headquarters, London.</p>
+            </li>
+            <li>
+              <p class="when">4–5 Mar 2026</p>
+              <h3>Space-Comm Expo, ExCeL London</h3>
+              <p>Attended the UK's space industry expo.</p>
             </li>
           </ol>
         </details>
         <details class="year">
-          <summary><span class="year-label">Upcoming</span><span class="year-count">5 entries</span><span class="fold" aria-hidden="true"></span></summary>
+          <summary><span class="year-label">2025</span><span class="year-count">6 entries</span><span class="fold" aria-hidden="true"></span></summary>
           <ol class="journey">
-            <li class="upcoming">
-              <p class="when">Feb 2027</p>
-              <h3>Airbus Space Design Competition finals, again</h3>
-              <p>Hoping to reach the finals again, building on what <a href="#rion">RION</a> taught us.</p>
+            <li>
+              <p class="when">Oct 2025 – Feb 2026</p>
+              <h3>Airbus Space Competition</h3>
+              <p>Reached the finals with <a href="#rion">Rion Imaging</a>.</p>
+              <figure class="thumb"><img src="assets/journey/airbus-finals.jpg" alt="Team Rion Imaging at the Airbus Space Competition finals" onerror="this.parentNode.remove()"><figcaption>Finals day, Airbus Stevenage</figcaption></figure>
             </li>
-            <li class="upcoming">
-              <p class="when">Q1 2027</p>
-              <h3>Banshee hot fire</h3>
-              <p>The first hot fire of <a href="#starworks">Starworks</a>' Banshee engine, hopefully on our own test stand.</p>
+            <li>
+              <p class="when">Summer 2025</p>
+              <h3>Two certificates</h3>
+              <p>Space mission design with EPFLx, and space hardware testing with Plastron UK. Both are displayed on my <a href="https://www.linkedin.com/in/dfps16/" target="_blank" rel="noopener">LinkedIn</a>.</p>
             </li>
-            <li class="upcoming">
-              <p class="when">Q1 2027</p>
-              <h3>SUSF's first liquid launch attempt</h3>
-              <p>Upcoming, powered by <a href="#scorpio">Scorpio 3</a>.</p>
+            <li>
+              <p class="when">Summer 2025</p>
+              <h3>Race 2 Space 2025</h3>
+              <p>On the testing team that hot-fired the Sverd liquid rocket engine, for which I manufactured the igniter and pressure sensor cartridges. <a href="#sverd">See the project →</a></p>
             </li>
-            <li class="upcoming">
-              <p class="when">Jun 2027</p>
-              <h3>UKSEDS Satellite Design Competition finals</h3>
-              <p>Hoping to reach the finals with the <a href="#stardust">CubeSat team</a>.</p>
+            <li>
+              <p class="when">Jun 2025</p>
+              <h3>Northrop Grumman challenge</h3>
+              <p>Presented to a panel of Northrop Grumman employee judges.</p>
             </li>
-            <li class="upcoming milestone">
-              <p class="when">Jun 2027</p>
-              <h3>BEng graduation</h3>
-              <p>Graduating from the University of Southampton.</p>
+            <li>
+              <p class="when">19–20 Mar 2025</p>
+              <h3>Farnborough International Space Show</h3>
+              <p>Met Fabrizio Pisani and Pedro Rodríguez López, founders of Meta Future and Southampton graduates, and had great conversations about how to run Starworks.</p>
+            </li>
+            <li>
+              <p class="when">Jan 2025</p>
+              <h3>Founded Starworks; started at WAU Holdings</h3>
+              <p>Two new commitments in the same month: <a href="#starworks">Starworks</a> and <a href="#wau">WAU Holdings</a>.</p>
+            </li>
+          </ol>
+        </details>
+        <details class="year">
+          <summary><span class="year-label">2024</span><span class="year-count">3 entries</span><span class="fold" aria-hidden="true"></span></summary>
+          <ol class="journey">
+            <li>
+              <p class="when">Oct 2024</p>
+              <h3>Joined the SU Liquid Rocket Engine team</h3>
+              <p>Where I went on to lead the <a href="#scorpio">Scorpio 3 injector</a> sub-team.</p>
+            </li>
+            <li>
+              <p class="when">Sep 2024</p>
+              <h3>Southampton, and straight into SUSF</h3>
+              <p>Started my degree and joined the Southampton University Spaceflight Society in my first weeks.</p>
+            </li>
+            <li>
+              <p class="when">May 2024</p>
+              <h3>Extended Essay: could asteroid mining pay?</h3>
+              <p>For my IB Extended Essay, I assessed the feasibility of an asteroid mining business, from both the market and the technical side.</p>
             </li>
           </ol>
         </details>
