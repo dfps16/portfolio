@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-10-24j">
+  <link rel="stylesheet" href="styles.css?v=2026-10-24l">
 </head>
 <body>
 
@@ -123,7 +123,7 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Main project: BEng thesis, 2026–27</span><span class="fold" aria-hidden="true"></span></span>
           <h3>Onboard learning of small-body dynamics from an imperfect initial model</h3>
-          <span class="lead-short">I am simulating a machine learning program onboard Rosetta that has been handed the same wrong initial guess of comet 67P's gravity.</span>
+          <span class="lead-short">I am simulating a <strong>machine learning</strong> program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess of comet 67P's gravity.</span>
         </summary>
         <div class="flag-body">
           <!-- Every sentence below is taken from the Individual Project Plan (23 Oct 2026), with at most minor rewording. -->
@@ -131,13 +131,13 @@
             <img src="assets/thesis/67p.jpg" alt="3D render of comet 67P/Churyumov–Gerasimenko: two lobes joined by a narrow neck" width="900" height="640">
             <figcaption>Comet 67P, rendered from the shape model in Izzo &amp; Gómez (2022)</figcaption>
           </figure>
-          <p class="lead">Astrodynamicists have many mature dynamical models for the major bodies of the solar system: we can precisely predict how a spacecraft will move around the Sun, the planets, and our Moon, thanks to the fact that their gravity has been measured over decades. Comets and asteroids are a completely different matter: each one has its own shape and density distribution, hence its own gravity, and its own spin. Before arrival, comet 67P was thought to be a smooth "rugby ball" shape; the images obtained on approach instead revealed a shape closer to a dumbbell. In this project, I am simulating a machine learning program onboard Rosetta that has been handed the same wrong initial guess. As the spacecraft flies the same orbits it flew on its mission, the program compares where it expected the spacecraft to be with where it really is, using that difference to correct its prediction of the comet's gravity.</p>
+          <p class="lead">Astrodynamicists have many mature dynamical models for the major bodies of the solar system: we can precisely predict how a spacecraft will move around the Sun, the planets, and our Moon, thanks to the fact that their gravity has been measured over decades. Comets and asteroids are a completely different matter: each one has its own shape and density distribution, hence its own gravity, and its own spin. Before arrival, comet 67P was thought to be a smooth "rugby ball" shape; the images obtained on approach instead revealed a shape closer to a dumbbell. In this project, I am simulating a <strong>machine learning</strong> program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess. As the spacecraft flies the same orbits it flew on its mission, the program compares where it expected the spacecraft to be with where it really is, using that difference to correct its prediction of the comet's gravity.</p>
           <p class="meta">
             <span><span class="k">Supervisor</span><span class="v">Prof. Alexander Wittig</span></span>
             <span><span class="k">Status</span><span class="v status warn">In progress</span></span>
           </p>
           <dl class="sections">
-            <div><dt>Aim</dt><dd>To determine whether a neural Hamiltonian learned gravity model, initialised with the pre-arrival data of comet 67P and trained only on data collected along Rosetta's flown trajectory, can correct that wrong model, and how its accuracy, and the tracking time needed to reach it, compare with those of a spherical-harmonic model estimated from the same data.</dd></div>
+            <div><dt>Aim</dt><dd>To determine whether a <strong>neural Hamiltonian</strong> learned gravity model, initialised with the pre-arrival data of comet 67P and trained only on data collected along Rosetta's flown trajectory, can correct that wrong model, and how its accuracy, and the tracking time needed to reach it, compare with those of a <strong>spherical-harmonic</strong> model estimated from the same data.</dd></div>
             <div><dt>Approach</dt><dd>This is a simulation study, using a simulated comet based on the uniform-density mascon model of 67P released with the geodesyNets code (Izzo and Gómez, 2022). A simulated spacecraft will replay the sequence of orbits Rosetta flew between arrival and lander delivery. The learned model will start from the pre-arrival data, propagate the spacecraft's state forward by a fixed timestep, compare its prediction with the observed state, and update the model to reduce the error.</dd></div>
             <div><dt>Why a neural Hamiltonian</dt><dd>It is estimated directly from tracking arcs, accepts an initial set of data, remains valid close to the nucleus, and is small (353–721 parameters).</dd></div>
             <div><dt>Baseline</dt><dd>The conventional spherical-harmonic estimator will be run as a batch least-squares fit receiving the same initial model, and the same observed states at the same update interval. To keep the comparison fair, it is fitted to the same arcs, through the same integrator and sensitivities.</dd></div>
@@ -153,10 +153,10 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Internship: Magdrive, Harwell, Jul – Aug 2026</span><span class="fold" aria-hidden="true"></span></span>
           <h3>MMAT: the Magdrive Mission Analysis Tool</h3>
-          <span class="lead-short">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a verification campaign.</span>
+          <span class="lead-short">At Magdrive, I built a tool to answer <strong>any customer manoeuvre question in house</strong>, and carried out a verification campaign.</span>
         </summary>
         <div class="flag-body">
-          <p class="lead">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a verification campaign. I built this during my UKSA Skills for Space internship at the company. Wonderful company to work for, cannot recommend it enough.</p>
+          <p class="lead">At Magdrive, I built a tool to answer <strong>any customer manoeuvre question in house</strong>, and carried out a verification campaign. I built this during my UKSA Skills for Space internship at the company. Wonderful company to work for, cannot recommend it enough.</p>
           <table class="ba">
             <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
             <tbody>
@@ -187,7 +187,7 @@
                 <div><dt>Verdict</dt><dd>GO: 0.27 kg per spacecraft for three raises</dd></div>
               </dl>
             </dd></div>
-            <div><dt>Delivered</dt><dd>27 modules, three test suites, packaged as an installer. Still in use at Magdrive.</dd></div>
+            <div><dt>Delivered</dt><dd>27 modules, three test suites, packaged as an installer. <strong>Still in use at Magdrive.</strong></dd></div>
             <div><dt>Poster</dt><dd>Presented at UKEO 2026, University of Warwick (15–17 Sep 2026). <a class="repo" href="assets/mmat/mmat-poster.pdf">View the poster (PDF) →</a></dd></div>
             <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>NiceGUI</li><li>Plotly</li><li>pytest</li><li>NASA GMAT</li></ul></dd></div>
           </dl>
@@ -200,7 +200,7 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Founder &amp; lead: Southampton University Spaceflight Society, Jan 2025 – present</span><span class="fold" aria-hidden="true"></span></span>
           <h3>Starworks: a student rocket that lands itself</h3>
-          <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our 2.5 kN Banshee engine. I founded it and lead it.</span>
+          <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our <strong>2.5 kN Banshee engine</strong>. I <strong>founded it and lead it</strong>.</span>
         </summary>
         <div class="flag-body">
           <p class="lead">Starworks is SUSF's vertical take-off, vertical-landing project, built around our Banshee engine (2.5 kN design thrust). I lead it technically and run the team.</p>
@@ -269,7 +269,7 @@
           <div class="row-body">
             <dl class="sections">
               <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
-              <div><dt>Method</dt><dd>Clohessy–Wiltshire dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An extended Kalman filter written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (NEES and NIS inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
+              <div><dt>Method</dt><dd>Clohessy–Wiltshire dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to <strong>statistical consistency</strong> (NEES and NIS inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
               <div><dt>Stack &amp; code</dt><dd>
                 <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
                 <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
@@ -295,7 +295,7 @@
             <dl class="sections">
               <div><dt>Why I did it</dt><dd>The team I lead, Starworks, is designing a lander. I wanted to understand the control problem myself before handing it to our brand new flight dynamics team, while also giving them a solid functional tool to start off with.</dd></div>
               <div><dt>Method</dt><dd>
-                Planar 3-DOF nonlinear dynamics with real mass depletion, and separate touchdown and flameout events. A cascaded PD controller with dynamic inversion, taken through to a gain-scheduled LQR tuned with Bryson's rule. Scenarios are JSON files validated by Pydantic, with 14 regression tests.
+                Planar 3-DOF nonlinear dynamics with real mass depletion, and separate touchdown and flameout events. A <strong>cascaded PD</strong> controller with dynamic inversion, taken through to a <strong>gain-scheduled LQR</strong> tuned with Bryson's rule. Scenarios are JSON files validated by Pydantic, with 14 regression tests.
                 <table>
                   <thead><tr><th>100 m drop, 20 m offset</th><th>Cascaded PD</th><th>LQR</th></tr></thead>
                   <tbody>
@@ -317,7 +317,7 @@
                 <ul class="tags"><li>Python</li><li>SciPy</li><li>Pydantic</li><li>pytest</li><li>uv</li></ul>
                 <a class="repo" href="https://github.com/dfps16/vtvl-sim">github.com/dfps16/vtvl-sim →</a>
               </dd></div>
-              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
+              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with <strong>2.1 kg of fuel to spare</strong>. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
               <div><dt>What's next</dt><dd>Active development is now in the hands of the Starworks flight dynamics team, where this sim has become a core tool.</dd></div>
             </dl>
           </div>
@@ -329,7 +329,7 @@
             <span class="when">Spring 2026</span>
             <div>
               <h3>Quadcopter gimbal control (SESA2030)</h3>
-              <span class="hook">In a team quadcopter build, I owned the camera gimbal's control system. The quadcopter flew; the gimbal demo taught me about quality assurance.</span>
+              <span class="hook">In a team quadcopter build, I <strong>owned the camera gimbal's control system</strong>. The quadcopter flew; the gimbal demo taught me about quality assurance.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -363,7 +363,7 @@
             <span class="when">Dec 2025</span>
             <div>
               <h3>ELSET Reader</h3>
-              <span class="hook">Made a batch reader for 10,000+ satellite orbit records from Space-Track. This was my first dive into orbit determination, a quick christmas coding project.</span>
+              <span class="hook">Made a batch reader for <strong>10,000+ satellite orbit records</strong> from Space-Track. This was my first dive into orbit determination, a quick christmas coding project.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -391,7 +391,7 @@
             <span class="when">Oct 2025 – Feb 2026</span>
             <div>
               <h3>Rion Imaging: Airbus Space Competition</h3>
-              <span class="hook">I led a team of five designing a lunar imaging startup: a 34-CubeSat constellation for near-real time images of most of the lunar surface. We reached the finals and were invited to present at Airbus Stevenage.</span>
+              <span class="hook">I led a team of five designing a lunar imaging startup: a <strong>34-CubeSat constellation</strong> for near-real time images of most of the lunar surface. <strong>We reached the finals</strong> and were invited to present at Airbus Stevenage.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -436,7 +436,7 @@
             <span class="when">Spring 2025</span>
             <div>
               <h3>Sverd liquid rocket engine</h3>
-              <span class="hook">I manufactured key parts of Sverd, a 3D-printed regeneratively cooled engine, and was on the team that hot-fired it at Race 2 Space 2025.</span>
+              <span class="hook">I manufactured key parts of Sverd, a 3D-printed regeneratively cooled engine, and was on the team that <strong>hot-fired it at Race 2 Space 2025</strong>.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -463,7 +463,7 @@
             <span class="when">Jan – Oct 2025</span>
             <div>
               <h3>Regenerative cooling at WAU Holdings</h3>
-              <span class="hook">Early-stage regenerative cooling design for a &gt;30 kN methalox engine at a startup, alongside founding Starworks.</span>
+              <span class="hook">Early-stage regenerative cooling design for a <strong>&gt;30 kN methalox engine</strong> at a startup, alongside founding Starworks.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -483,7 +483,7 @@
             <span class="when">Oct 2024 – Jun 2025</span>
             <div>
               <h3>Scorpio 3 pintle injector</h3>
-              <span class="hook">I led the sub-team that designed and partly machined the injector for SU Liquid Rocket Engine's 2.5 kN engine. It hot-fired successfully and now powers SUSF's first liquid launch attempt.</span>
+              <span class="hook">I <strong>led the sub-team</strong> that designed and partly machined the injector for SU Liquid Rocket Engine's 2.5 kN engine. It <strong>hot-fired successfully</strong> and now powers SUSF's first liquid launch attempt.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -575,14 +575,14 @@
             <span class="when">May 2026 –</span>
             <div>
               <h3>Head of Projects, SUSF</h3>
-              <span class="hook">Society membership grew from ~150 to 260+ largely thanks to our large project selection, this year our teams entered a record five national competitions and are attempting new exciting milestones.</span>
+              <span class="hook">Society membership grew from <strong>~150 to 260+</strong> largely thanks to our large project selection, this year our teams entered a <strong>record five national competitions</strong> and are attempting new exciting milestones.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>Portfolio</dt><dd>Eight teams, including two new teams I brought on board, and an annual budget of £12k+.</dd></div>
+              <div><dt>Portfolio</dt><dd><strong>Eight teams</strong>, including two new teams I brought on board, and an annual budget of <strong>£12k+</strong>.</dd></div>
               <div><dt>What I set up</dt><dd>A tiered funding model (flagship, experimental, competition), adopted by the society. A shared compendium, SharePoint and GitHub organisation used by all teams. A Team Lead Code of Conduct, adopted society-wide.</dd></div>
               <div><dt>Strategy</dt><dd>Presented the society's strategy to the faculty and the committee. <a href="strategy.html">Read the one-page summary →</a></dd></div>
               <div><dt>Link</dt><dd><a class="repo" href="https://github.com/SU-Spaceflight">github.com/SU-Spaceflight →</a></dd></div>
@@ -617,7 +617,7 @@
             <span class="when">Jan 2025 –</span>
             <div>
               <h3>Founder &amp; Lead, Starworks</h3>
-              <span class="hook">From founding to ~50 members, an engine design review and a $3,000 grant.</span>
+              <span class="hook">From founding to <strong>~50 members</strong>, an engine design review and a <strong>$3,000 grant</strong>.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
@@ -682,7 +682,7 @@
             <li>
               <p class="when">17–18 Oct 2026</p>
               <h3>UKSEDS Space Entrepreneurship Programme, Edinburgh</h3>
-              <p>Selected for the programme. In randomly assigned teams, ours won the pitching competition with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva. <span class="todo">To confirm: judges' names against the programme</span></p>
+              <p>Selected for the programme. In randomly assigned teams, ours <strong>won the pitching competition</strong> with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva. <span class="todo">To confirm: judges' names against the programme</span></p>
               <figure class="thumbs">
                 <img src="assets/journey/seds-edinburgh.jpg" alt="Three of us in front of the University of Edinburgh crest" loading="lazy">
                 <img src="assets/journey/seds-cohort.jpg" alt="The programme cohort on a staircase next to a UKSEDS banner" loading="lazy">
@@ -703,7 +703,7 @@
             <li>
               <p class="when">18–19 Jul 2026</p>
               <h3>European Space Generation Workshop, Royal Institution, London</h3>
-              <p>Selected delegate. Took part in a SatComs roundtable on IRIS² with students, young professionals and MDA Space industry mentors, and met Andrew Bacon (Space Forge) and ESA astronaut Meganne Christian.</p>
+              <p><strong>Selected delegate</strong>. Took part in a SatComs roundtable on IRIS² with students, young professionals and MDA Space industry mentors, and met Andrew Bacon (Space Forge) and ESA astronaut Meganne Christian.</p>
               <figure class="thumb"><img src="assets/journey/esgw-london.jpg" alt="At the European Space Generation Workshop in London" onerror="this.parentNode.remove()"><figcaption>E-SGW 2026, London</figcaption></figure>
             </li>
             <li>
@@ -729,7 +729,7 @@
             <li>
               <p class="when">Mar 2026</p>
               <h3>Selected for UKSA Skills for Space</h3>
-              <p>One of ~50 places from more than 1,000 applicants, which led to my <a href="#magdrive">Magdrive internship</a>.</p>
+              <p><strong>One of ~50 places from more than 1,000 applicants</strong>, which led to my <a href="#magdrive">Magdrive internship</a>.</p>
             </li>
             <li>
               <p class="when">11 Mar 2026</p>

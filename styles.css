@@ -84,6 +84,7 @@ body {
 
 a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .18em; }
+strong { font-weight: 500; color: var(--ink); }
 :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 2px; }
 
 .skip {
@@ -211,10 +212,8 @@ section.block { padding: 64px 0 0; }
 .flag-body .lead { margin: 0 0 20px; }
 .flag-body { padding-top: 4px; }
 .flagship h3 { font: 400 var(--s3)/1.15 var(--serif); letter-spacing: -.015em; margin: 0 0 10px; max-width: 22em; }
-.flagship.main h3 { font-size: var(--s4); font-weight: 300; }
 .flagship .meta { margin-bottom: 20px; }
 .flagship .lead { color: var(--ink-2); max-width: 62ch; }
-.flagship.main .lead { font-size: var(--s1); line-height: 1.5; color: var(--ink); max-width: 34em; }
 .flagship .sections { margin-bottom: 24px; }
 .meta .v.status { text-align: left; }
 
@@ -424,9 +423,7 @@ footer { color: var(--ink-3); }
   .row .fold { grid-column: 3; grid-row: 1; }
   .row > summary > div { grid-column: 1 / -1; }
   .row-body { padding-left: 0; }
-  .flagship.main h3 { font-size: var(--s3); }
   .flagship h3 { font-size: var(--s2); }
-  .flagship.main .lead { font-size: var(--s0); }
   table.ba td:first-child { white-space: normal; }
 
 
