@@ -108,7 +108,7 @@ a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-under
 .topbar .name:hover { text-decoration: none; }
 .topbar nav { display: flex; gap: 24px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
 .topbar nav::-webkit-scrollbar { display: none; }
-.topbar nav a { font: var(--s-2)/1 var(--mono); letter-spacing: .12em; color: var(--ink-2); white-space: nowrap; }
+.topbar nav a { font: var(--s-2)/1.6 var(--mono); letter-spacing: .12em; color: var(--ink-2); white-space: nowrap; }
 .topbar nav a:hover { color: var(--ink); text-decoration: none; }
 
 .toggle {
@@ -391,6 +391,12 @@ footer { color: var(--ink-3); }
 /* ---------- Breakpoints: 1024 / 720 ---------- */
 @media (max-width: 1024px) {
   .metrics b { font-size: var(--s1); }
+}
+
+@media (max-width: 960px) {
+  .topbar .wrap { gap: 20px; }
+  .topbar nav { gap: 14px; }
+  .topbar nav a { letter-spacing: 0; }
 }
 
 @media (max-width: 720px) {
