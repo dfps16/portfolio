@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Diego Paniagua Silva</title>
-  <meta name="description" content="Engineering portfolio of Diego F. Paniagua Silva: flight dynamics and GNC, student space leadership, and a journey into the space industry.">
+  <meta name="description" content="Engineering portfolio of Diego F. Paniagua Silva: flight dynamics, GNC, astrodynamics and mission analysis, student space leadership, and a journey into the space industry.">
   <script>
     try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
@@ -55,7 +55,7 @@
           <span><span class="k">Degree</span><span class="v">BEng Aeronautics &amp; Astronautics (Spacecraft Engineering), University of Southampton</span></span>
           <span><span class="k">Dates</span><span class="v">Sep 2024 – Jun 2027</span></span>
           <span><span class="k">Grade</span><span class="v">1st class throughout</span></span>
-          <span><span class="k">Languages</span><span class="v">EN, ES, FR</span></span>
+          <span><span class="k">Languages</span><span class="v">EN, ES, FR, IT (learning)</span></span>
         </p>
         <div class="links">
           <a class="btn primary" href="mailto:diego.paniagua.silva@pm.me">Email me</a>
@@ -123,7 +123,7 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Main project: BEng thesis, 2026–27</span><span class="fold" aria-hidden="true"></span></span>
           <h3>Onboard learning of small-body dynamics from an imperfect initial model</h3>
-          <span class="lead-short">I am simulating a <strong>machine learning</strong> program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess of comet 67P's gravity.</span>
+          <span class="lead-short">I am simulating a machine learning program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess of <strong>comet 67P's gravity</strong>.</span>
         </summary>
         <div class="flag-body">
           <!-- Every sentence below is taken from the Individual Project Plan (23 Oct 2026), with at most minor rewording. -->
@@ -131,7 +131,7 @@
             <img src="assets/thesis/67p.jpg" alt="3D render of comet 67P/Churyumov–Gerasimenko: two lobes joined by a narrow neck" width="900" height="640">
             <figcaption>Comet 67P, rendered from the shape model in Izzo &amp; Gómez (2022)</figcaption>
           </figure>
-          <p class="lead">Astrodynamicists have many mature dynamical models for the major bodies of the solar system: we can precisely predict how a spacecraft will move around the Sun, the planets, and our Moon, thanks to the fact that their gravity has been measured over decades. Comets and asteroids are a completely different matter: each one has its own shape and density distribution, hence its own gravity, and its own spin. Before arrival, comet 67P was thought to be a smooth "rugby ball" shape; the images obtained on approach instead revealed a shape closer to a dumbbell. In this project, I am simulating a <strong>machine learning</strong> program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess. As the spacecraft flies the same orbits it flew on its mission, the program compares where it expected the spacecraft to be with where it really is, using that difference to correct its prediction of the comet's gravity.</p>
+          <p class="lead">Astrodynamicists have many mature dynamical models for the major bodies of the solar system: we can precisely predict how a spacecraft will move around the Sun, the planets, and our Moon, thanks to the fact that their gravity has been measured over decades. Comets and asteroids are a completely different matter: each one has its own shape and density distribution, hence its own gravity, and its own spin. Before arrival, comet 67P was thought to be a smooth "rugby ball" shape; the images obtained on approach instead revealed a shape closer to a dumbbell. In this project, I am simulating a machine learning program onboard Rosetta that has been handed the same wrong initial guess. As the spacecraft flies the same orbits it flew on its mission, the program compares where it expected the spacecraft to be with where it really is, using that difference to correct its prediction of the comet's gravity.</p>
           <p class="meta">
             <span><span class="k">Supervisor</span><span class="v">Prof. Alexander Wittig</span></span>
             <span><span class="k">Status</span><span class="v status warn">In progress</span></span>
@@ -140,7 +140,7 @@
             <div><dt>Aim</dt><dd>To determine whether a <strong>neural Hamiltonian</strong> learned gravity model, initialised with the pre-arrival data of comet 67P and trained only on data collected along Rosetta's flown trajectory, can correct that wrong model, and how its accuracy, and the tracking time needed to reach it, compare with those of a <strong>spherical-harmonic</strong> model estimated from the same data.</dd></div>
             <div><dt>Approach</dt><dd>This is a simulation study, using a simulated comet based on the uniform-density mascon model of 67P released with the geodesyNets code (Izzo and Gómez, 2022). A simulated spacecraft will replay the sequence of orbits Rosetta flew between arrival and lander delivery. The learned model will start from the pre-arrival data, propagate the spacecraft's state forward by a fixed timestep, compare its prediction with the observed state, and update the model to reduce the error.</dd></div>
             <div><dt>Why a neural Hamiltonian</dt><dd>It is estimated directly from tracking arcs, accepts an initial set of data, remains valid close to the nucleus, and is small (353–721 parameters).</dd></div>
-            <div><dt>Baseline</dt><dd>The conventional spherical-harmonic estimator will be run as a batch least-squares fit receiving the same initial model, and the same observed states at the same update interval. To keep the comparison fair, it is fitted to the same arcs, through the same integrator and sensitivities.</dd></div>
+            <div><dt>Baseline</dt><dd>The conventional spherical-harmonic estimator will be run as a <strong>batch least-squares</strong> fit receiving the same initial model, and the same observed states at the same update interval. To keep the comparison fair, it is fitted to the same arcs, through the same integrator and sensitivities.</dd></div>
             <div><dt>What's new</dt><dd>This project builds directly on Acciarini and Izzo (2026), and differs in three ways: the initial model is wrong (the pre-arrival data, and an inaccurate mass), the trajectory follows Rosetta's own, and the comparison focuses on how long each representation takes to recover from the wrong prior.</dd></div>
             <div><dt>Success</dt><dd>I will consider the project a success if the program can correct the wrong guess at all; it succeeds further if it does so faster than the conventional method.</dd></div>
             <div><dt>Stage 2</dt><dd>A reinforcement-learning agent chooses the trajectory to gather information faster. This will only be attempted if Stage 1 is complete on schedule.</dd></div>
@@ -153,17 +153,17 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Internship: Magdrive, Harwell, Jul – Aug 2026</span><span class="fold" aria-hidden="true"></span></span>
           <h3>MMAT: the Magdrive Mission Analysis Tool</h3>
-          <span class="lead-short">At Magdrive, I built a tool to answer <strong>any customer manoeuvre question in house</strong>, and carried out a verification campaign.</span>
+          <span class="lead-short">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>.</span>
         </summary>
         <div class="flag-body">
-          <p class="lead">At Magdrive, I built a tool to answer <strong>any customer manoeuvre question in house</strong>, and carried out a verification campaign. I built this during my UKSA Skills for Space internship at the company. Wonderful company to work for, cannot recommend it enough.</p>
+          <p class="lead">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>. I built this during my UKSA Skills for Space internship at the company. Wonderful company to work for, cannot recommend it enough.</p>
           <table class="ba">
             <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
             <tbody>
               <tr><td>Entry point</td><td>Script with a hand-edited path</td><td>Desktop icon, native window</td></tr>
               <tr><td>Plots</td><td>Static matplotlib</td><td>Interactive, six tabs, some live</td></tr>
               <tr><td>Tests</td><td>None</td><td>Three suites, up to 225 scenarios</td></tr>
-              <tr><td>Verification</td><td>30 GMAT scenarios, ~50% agreement</td><td>225 scenarios, ~95% field agreement</td></tr>
+              <tr><td>V&amp;V</td><td>30 GMAT scenarios, ~50% agreement</td><td><strong>225 scenarios, ~95% field agreement</strong></td></tr>
               <tr><td>Mission structure</td><td>One manoeuvre</td><td>Chainable multi-phase plans</td></tr>
               <tr><td>Batch</td><td>One run at a time</td><td>Parallel parameter sweeps</td></tr>
               <tr><td>Distribution</td><td>Clone the repo</td><td>One install command</td></tr>
@@ -200,7 +200,7 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Founder &amp; lead: Southampton University Spaceflight Society, Jan 2025 – present</span><span class="fold" aria-hidden="true"></span></span>
           <h3>Starworks: a student rocket that lands itself</h3>
-          <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our <strong>2.5 kN Banshee engine</strong>. I <strong>founded it and lead it</strong>.</span>
+          <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our 2.5 kN Banshee engine. I <strong>founded it and lead it</strong>.</span>
         </summary>
         <div class="flag-body">
           <p class="lead">Starworks is SUSF's vertical take-off, vertical-landing project, built around our Banshee engine (2.5 kN design thrust). I lead it technically and run the team.</p>
@@ -211,8 +211,8 @@
                 <li><span class="d">May 2025</span>Core team formed</li>
                 <li><span class="d">Sep 2025</span>30 members</li>
                 <li><span class="d">Dec 2025</span>Engine preliminary design review, which I organised and mostly wrote</li>
-                <li><span class="d">Jan 2026</span>$3,000 Definity Project grant, from an application I wrote</li>
-                <li><span class="d">2026–27</span>~50 members, restructured into three working groups focused on the engine and testing</li>
+                <li><span class="d">Jan 2026</span><strong>$3,000 Definity Project grant</strong>, from an application I wrote</li>
+                <li><span class="d">2026–27</span><strong>~50 members</strong>, restructured into three working groups focused on the engine and testing</li>
               </ol>
             </dd></div>
             <div><dt>Connected work</dt><dd>Banshee's spiritual predecessor is <a href="#sverd">Sverd</a>, the 3D-printed regeneratively cooled engine I helped build and test. The core team from <a href="#scorpio">Scorpio 3</a> now leads Starworks propulsion. My <a href="#vtvl">VTVL descent simulator</a> is now a full Starworks team tool, maintained by our Flight Dynamics team.</dd></div>
@@ -269,7 +269,7 @@
           <div class="row-body">
             <dl class="sections">
               <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
-              <div><dt>Method</dt><dd>Clohessy–Wiltshire dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to <strong>statistical consistency</strong> (NEES and NIS inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
+              <div><dt>Method</dt><dd><strong>Clohessy–Wiltshire</strong> dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (<strong>NEES and NIS</strong> inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
               <div><dt>Stack &amp; code</dt><dd>
                 <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
                 <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
@@ -295,7 +295,7 @@
             <dl class="sections">
               <div><dt>Why I did it</dt><dd>The team I lead, Starworks, is designing a lander. I wanted to understand the control problem myself before handing it to our brand new flight dynamics team, while also giving them a solid functional tool to start off with.</dd></div>
               <div><dt>Method</dt><dd>
-                Planar 3-DOF nonlinear dynamics with real mass depletion, and separate touchdown and flameout events. A <strong>cascaded PD</strong> controller with dynamic inversion, taken through to a <strong>gain-scheduled LQR</strong> tuned with Bryson's rule. Scenarios are JSON files validated by Pydantic, with 14 regression tests.
+                Planar 3-DOF nonlinear dynamics with real mass depletion, and separate touchdown and flameout events. A <strong>cascaded PD</strong> controller with <strong>dynamic inversion</strong>, taken through to a <strong>gain-scheduled LQR</strong> tuned with Bryson's rule. Scenarios are JSON files validated by Pydantic, with 14 regression tests.
                 <table>
                   <thead><tr><th>100 m drop, 20 m offset</th><th>Cascaded PD</th><th>LQR</th></tr></thead>
                   <tbody>
@@ -317,7 +317,7 @@
                 <ul class="tags"><li>Python</li><li>SciPy</li><li>Pydantic</li><li>pytest</li><li>uv</li></ul>
                 <a class="repo" href="https://github.com/dfps16/vtvl-sim">github.com/dfps16/vtvl-sim →</a>
               </dd></div>
-              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with <strong>2.1 kg of fuel to spare</strong>. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
+              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
               <div><dt>What's next</dt><dd>Active development is now in the hands of the Starworks flight dynamics team, where this sim has become a core tool.</dd></div>
             </dl>
           </div>
@@ -329,14 +329,14 @@
             <span class="when">Spring 2026</span>
             <div>
               <h3>Quadcopter gimbal control (SESA2030)</h3>
-              <span class="hook">In a team quadcopter build, I <strong>owned the camera gimbal's control system</strong>. The quadcopter flew; the gimbal demo taught me about quality assurance.</span>
+              <span class="hook">In a team quadcopter build, I owned the camera gimbal's control system. The quadcopter flew; the gimbal demo taught me about quality assurance.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>My role</dt><dd>Owned the PID gimbal control system and was responsible for final assembly, in semester 2 of 2025–26.</dd></div>
+              <div><dt>My role</dt><dd>Owned the <strong>PID gimbal control system</strong> and was responsible for final assembly, in semester 2 of 2025–26.</dd></div>
               <div><dt>Result</dt><dd>The quadcopter flew. The gimbal demo failed, because of one negative sign in the code and one unplugged cable.</dd></div>
               <div><dt>Lesson</dt><dd>Final assembly taught me a lot about integration, and how important it is to plan for integration and assembly early on. Final assembly and code upload also need their own quality checks.</dd></div>
               <div><dt>Media</dt><dd>
@@ -363,7 +363,7 @@
             <span class="when">Dec 2025</span>
             <div>
               <h3>ELSET Reader</h3>
-              <span class="hook">Made a batch reader for <strong>10,000+ satellite orbit records</strong> from Space-Track. This was my first dive into orbit determination, a quick christmas coding project.</span>
+              <span class="hook">Made a batch reader for 10,000+ satellite orbit records from Space-Track. This was my first dive into <strong>orbit determination</strong> and <strong>space domain awareness</strong>, a quick christmas coding project.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -398,8 +398,8 @@
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>My role</dt><dd>As team lead I coordinated the business case and technical work, I also carried out the market sizing myself and set mission requirements in line with our business goals.</dd></div>
-              <div><dt>Concept</dt><dd>30 imaging and 4 relay 2U CubeSats in lunar orbit. The imaging layer flies at 350 km and the support layer at 100 km, at the 93° inclination selected from our GMAT trade study, with planes evenly spaced in RAAN to avoid coverage clustering, for 99% lunar coverage. The business case sized a £1.17B annual addressable market in 2045, with £69.5M of non-recurring cost covered by a £77M three-phase funding plan.</dd></div>
+              <div><dt>My role</dt><dd>As team lead I coordinated the business case and technical work, I also carried out the <strong>market sizing</strong> myself and set mission requirements in line with our business goals.</dd></div>
+              <div><dt>Concept</dt><dd>30 imaging and 4 relay 2U CubeSats in lunar orbit. The imaging layer flies at 350 km and the support layer at 100 km, at the 93° inclination selected from our <strong>GMAT trade study</strong>, with planes evenly spaced in RAAN to avoid coverage clustering, for <strong>99% lunar coverage</strong>. The business case sized a £1.17B annual addressable market in 2045, with £69.5M of non-recurring cost covered by a £77M three-phase funding plan.</dd></div>
               <div><dt>Feedback</dt><dd>Before the final, reviewers pointed out that our Walker design based on preliminary hand calcs ignored lunar rotation, so we replaced it with a full constellation design in GMAT using its lunar gravity model and rotation. At the final, the judges found the realistic customer base too small: our estimate of lunar settlement was too large to justify near live imaging of such a large portion of the lunar surface.</dd></div>
               <div><dt>Lesson</dt><dd>Business concepts should start with what the market needs, from a customer base rather than a cool concept. I would later learn in the UKSEDS Space Entrepreneurship programme that this is called a demand pull instead of a technology push.</dd></div>
               <div><dt>Team</dt><dd>
@@ -463,7 +463,7 @@
             <span class="when">Jan – Oct 2025</span>
             <div>
               <h3>Regenerative cooling at WAU Holdings</h3>
-              <span class="hook">Early-stage regenerative cooling design for a <strong>&gt;30 kN methalox engine</strong> at a startup, alongside founding Starworks.</span>
+              <span class="hook">Early-stage regenerative cooling design for a &gt;30 kN methalox engine at a startup, alongside founding Starworks.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -517,7 +517,7 @@
         <article id="characteriser">
           <p class="when-mini">Planned</p>
           <h4>Unknown space object characteriser</h4>
-          <p>The plan: estimate the area-to-mass ratio and origin of poorly characterised space objects from public tracking data, then test the estimates blind against objects whose properties are known. It will run on my own C++ propagator and a batch least-squares estimator. The first part, the propagator itself, is in progress.</p>
+          <p>A <strong>space domain awareness</strong> project. The plan: estimate the area-to-mass ratio and origin of poorly characterised space objects from public tracking data, then test the estimates blind against objects whose properties are known. It will run on my own C++ propagator and a batch least-squares estimator. The first part, the propagator itself, is in progress.</p>
         </article>
       </div>
       <p class="to-top"><a href="#top">Back to top ↑</a></p>
@@ -552,7 +552,7 @@
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>My role</dt><dd>Management and requirements tracking, plus the design of a novel cold gas thruster.</dd></div>
+              <div><dt>My role</dt><dd>Management and <strong>requirements tracking</strong>, plus the design of a novel cold gas thruster.</dd></div>
               <div><dt>Timeline</dt><dd>
                 <ol class="dated">
                   <li><span class="d">Dec 2026</span>Preliminary design review</li>
@@ -575,7 +575,7 @@
             <span class="when">May 2026 –</span>
             <div>
               <h3>Head of Projects, SUSF</h3>
-              <span class="hook">Society membership grew from <strong>~150 to 260+</strong> largely thanks to our large project selection, this year our teams entered a <strong>record five national competitions</strong> and are attempting new exciting milestones.</span>
+              <span class="hook">Society membership grew from ~150 to 260+ largely thanks to our large project selection, this year our teams entered a record five national competitions and are attempting new exciting milestones.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
@@ -682,7 +682,7 @@
             <li>
               <p class="when">17–18 Oct 2026</p>
               <h3>UKSEDS Space Entrepreneurship Programme, Edinburgh</h3>
-              <p>Selected for the programme. In randomly assigned teams, ours <strong>won the pitching competition</strong> with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva. <span class="todo">To confirm: judges' names against the programme</span></p>
+              <p>Selected for the programme. In randomly assigned teams, ours won the pitching competition with a space debris characterisation business. Talks included Katherine Courtney, former CEO of the UK Space Agency; the judges were Matjaz Vidmar, Ria Urban and Aiperi Dalbaeva.</p>
               <figure class="thumbs">
                 <img src="assets/journey/seds-edinburgh.jpg" alt="Three of us in front of the University of Edinburgh crest" loading="lazy">
                 <img src="assets/journey/seds-cohort.jpg" alt="The programme cohort on a staircase next to a UKSEDS banner" loading="lazy">
@@ -703,7 +703,7 @@
             <li>
               <p class="when">18–19 Jul 2026</p>
               <h3>European Space Generation Workshop, Royal Institution, London</h3>
-              <p><strong>Selected delegate</strong>. Took part in a SatComs roundtable on IRIS² with students, young professionals and MDA Space industry mentors, and met Andrew Bacon (Space Forge) and ESA astronaut Meganne Christian.</p>
+              <p>Selected delegate. Took part in a SatComs roundtable on IRIS² with students, young professionals and MDA Space industry mentors, and met Andrew Bacon (Space Forge) and ESA astronaut Meganne Christian.</p>
               <figure class="thumb"><img src="assets/journey/esgw-london.jpg" alt="At the European Space Generation Workshop in London" onerror="this.parentNode.remove()"><figcaption>E-SGW 2026, London</figcaption></figure>
             </li>
             <li>
@@ -719,7 +719,7 @@
             <li>
               <p class="when">Mar – Jun 2026</p>
               <h3>Writer, European Defense Tech Hub</h3>
-              <p>A main article on Luch-2 / Olymp-K-2, plus around twelve newsletters. <span class="todo">To add: article link and newsletter numbers</span></p>
+              <p>A main article, <em>Threats in Orbit: Europe’s Space Defence Gap</em>, on Luch-2 / Olymp-K-2 and the gap between detecting and responding to threats in orbit, plus around twelve newsletters. <a href="assets/edth/threats-in-orbit.pdf">Read the article (PDF, 4 pages) →</a></p>
             </li>
             <li>
               <p class="when">Mar 2026</p>
@@ -735,11 +735,19 @@
               <p class="when">11 Mar 2026</p>
               <h3>RAeS Weapon Systems &amp; Capability Conference</h3>
               <p>"The Need For A Revolution In Managing Risk, Cost And Time", at the Royal Aeronautical Society headquarters, London.</p>
+              <figure class="thumbs">
+                <img src="assets/journey/raes-badge.jpg" alt="My delegate badge for the RAeS Weapon Systems &amp; Capability Conference" loading="lazy">
+                <figcaption>My conference badge</figcaption>
+              </figure>
             </li>
             <li>
               <p class="when">4–5 Mar 2026</p>
               <h3>Space-Comm Expo, ExCeL London</h3>
               <p>Attended the UK's space industry expo.</p>
+              <figure class="thumbs">
+                <img src="assets/journey/spacecomm-haul.jpg" alt="Expo merchandise laid out on a bed: tote bags, lanyards, stickers, keyrings, a mug and my expo pass" loading="lazy">
+                <figcaption>The merch haul</figcaption>
+              </figure>
             </li>
           </ol>
         </details>
@@ -764,13 +772,24 @@
             </li>
             <li>
               <p class="when">Jun 2025</p>
-              <h3>Northrop Grumman challenge</h3>
-              <p>Presented to a panel of Northrop Grumman employee judges.</p>
+              <h3>Innovation Challenge with Northrop Grumman</h3>
+              <p>A four-day sprint on a Northrop Grumman brief: reuse and repurpose decommissioned military assets. Delivered a solution framework for repurposing air, land and sea assets in innovative, sustainable ways, and presented it to a panel of Northrop Grumman employee judges.</p>
+              <figure class="thumbs">
+                <img src="assets/journey/ng-team.jpg" alt="The Blue Team holding Summer Innovation Challenge 2025 certificates, with two Northrop Grumman staff" loading="lazy">
+                <img src="assets/journey/ng-pitch.jpg" alt="Presenting a slide on reusing outdated air assets to the judging panel" loading="lazy">
+                <figcaption>My team pitching to the Northrop Grumman judges</figcaption>
+              </figure>
             </li>
             <li>
               <p class="when">19–20 Mar 2025</p>
               <h3>Farnborough International Space Show</h3>
-              <p>Met Fabrizio Pisani and Pedro Rodríguez López, founders of Meta Future and Southampton graduates, and had great conversations about how to run Starworks.</p>
+              <p>Met Fabrizio Pisani and Pedro Rodríguez López, founders of Meta Futura and Southampton graduates, and had great conversations about how to run Starworks.</p>
+              <figure class="thumbs">
+                <img src="assets/journey/fiss-entrance.jpg" alt="The glass-fronted show entrance at Farnborough International, with Space Show banners" loading="lazy">
+                <img src="assets/journey/fiss-main-stage.jpg" alt="A panel on human habitation in space on the Space Show main stage" loading="lazy">
+                <img src="assets/journey/fiss-badge.jpg" alt="My Space Show visitor badge" loading="lazy">
+                <figcaption>The show entrance, a main stage panel on human habitation in space, and my badge</figcaption>
+              </figure>
             </li>
             <li>
               <p class="when">Jan 2025</p>
