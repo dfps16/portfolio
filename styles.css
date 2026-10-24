@@ -363,6 +363,9 @@ td:not(:first-child) { font-family: var(--mono); color: var(--ink); }
 .journey p { margin: 0; color: var(--ink-2); max-width: 62ch; }
 .journey .thumb { margin: 16px 0 0; max-width: 320px; }
 .journey .thumb img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--rule); }
+.journey .thumbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+.journey .thumbs img { display: block; height: 180px; width: auto; max-width: 100%; object-fit: cover; border: 1px solid var(--rule); }
+.journey .thumbs figcaption { flex-basis: 100%; font: var(--s-1)/1.5 var(--sans); color: var(--ink-3); margin-top: -2px; }
 .journey .thumb figcaption { font: var(--s-1)/1.5 var(--sans); letter-spacing: 0; color: var(--ink-3); margin-top: 6px; }
 
 /* ---------- Journey year groups ---------- */
@@ -401,6 +404,7 @@ footer { color: var(--ink-3); }
 
 @media (max-width: 720px) {
   :root { --gutter: 16px; }
+  .journey .thumbs img { height: 120px; }
   .topbar .name { display: none; }
   .topbar .wrap { gap: 12px; }
   .topbar nav { margin-left: 0; gap: 10px; }
