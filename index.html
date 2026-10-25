@@ -123,7 +123,7 @@
         <summary>
           <span class="flag-top"><span class="flag-label">Main project: BEng thesis, 2026–27</span><span class="fold" aria-hidden="true"></span></span>
           <h3>Onboard learning of small-body dynamics from an imperfect initial model</h3>
-          <span class="lead-short">I am simulating a machine learning program onboard <strong>Rosetta</strong> that has been handed the same wrong initial guess of <strong>comet 67P's gravity</strong>.</span>
+          <span class="lead-short">I am simulating a machine learning program onboard <strong>Rosetta</strong> that has been handed the mission's wrong pre-arrival guess of <strong>comet 67P's gravity</strong>.</span>
         </summary>
         <div class="flag-body">
           <!-- Every sentence below is taken from the Individual Project Plan (23 Oct 2026), with at most minor rewording. -->
@@ -156,7 +156,7 @@
           <span class="lead-short">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>.</span>
         </summary>
         <div class="flag-body">
-          <p class="lead">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>. I built this during my UKSA Skills for Space internship at the company. Wonderful company to work for, cannot recommend it enough.</p>
+          <p class="lead">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>. I built this during my UKSA Skills for Space internship at the company. It was a wonderful company to work for, and I can't recommend it enough.</p>
           <table class="ba">
             <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
             <tbody>
@@ -269,12 +269,12 @@
           <div class="row-body">
             <dl class="sections">
               <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
-              <div><dt>Method</dt><dd><strong>Clohessy–Wiltshire</strong> dynamics, whose closed-form state-transition matrix makes propagation exact, so all the nonlinearity sits in the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (<strong>NEES and NIS</strong> inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
+              <div><dt>Method</dt><dd>A Python-based simulator in <strong>Clohessy–Wiltshire</strong> dynamics. This makes propagation exact, so non-linearity is only introduced through the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (<strong>NEES and NIS</strong> inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
               <div><dt>Stack &amp; code</dt><dd>
                 <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
                 <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
               </dd></div>
-              <div><dt>What I learnt so far</dt><dd>Frame and sign conventions are where these projects go wrong, so I validated them on the bounded relative-motion ellipse before writing any filter. An error plot can't tell you whether a filter is well tuned; consistency tests can.</dd></div>
+              <div><dt>What I learnt so far</dt><dd>Building this project is similar in structure to the previous <a href="#vtvl">vtvl-sim</a> I made; however, the dynamics and measurement parts are new to me.</dd></div>
               <div><dt>What's next</dt><dd>Feeding the estimate into a rendezvous controller, to close the full guidance, navigation and control loop.</dd></div>
             </dl>
           </div>
@@ -286,7 +286,7 @@
             <span class="when">Summer 2026</span>
             <div>
               <h3>VTVL descent simulator</h3>
-              <span class="hook">A simulated vertical take off and vertical landing rocket, the aim was to compare multiple controller types.</span>
+              <span class="hook">A simulated vertical take-off, vertical-landing rocket, built to compare different controller types.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
@@ -317,7 +317,7 @@
                 <ul class="tags"><li>Python</li><li>SciPy</li><li>Pydantic</li><li>pytest</li><li>uv</li></ul>
                 <a class="repo" href="https://github.com/dfps16/vtvl-sim">github.com/dfps16/vtvl-sim →</a>
               </dd></div>
-              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions, since the LQR controller I designed had no fuel term, this behaviour was explainable.</dd></div>
+              <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early, at around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions: the LQR controller I designed had no fuel term, which explains the behaviour.</dd></div>
               <div><dt>What's next</dt><dd>Active development is now in the hands of the Starworks flight dynamics team, where this sim has become a core tool.</dd></div>
             </dl>
           </div>
@@ -363,22 +363,22 @@
             <span class="when">Dec 2025</span>
             <div>
               <h3>ELSET Reader</h3>
-              <span class="hook">Made a batch reader for 10,000+ satellite orbit records from Space-Track. This was my first dive into <strong>orbit determination</strong> and <strong>space domain awareness</strong>, a quick christmas coding project.</span>
+              <span class="hook">Made a batch reader for 10,000+ satellite orbit records from Space-Track. This was my first dive into <strong>orbit determination</strong> and <strong>space domain awareness</strong>, a quick Christmas coding project.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>What it does</dt><dd>Batch-processes ELSETs to plot a given object's orbital elements over time. I focused on unknown objects but also looked at Starlink and GEO sats.</dd></div>
+              <div><dt>What it does</dt><dd>Batch-processes ELSETs to plot a given object's orbital elements over time. I focused on unknown objects but also looked at Starlink and GEO satellites.</dd></div>
               <div><dt>What it led to</dt><dd>Asking myself whether manoeuvres can be detected from TLEs, and what methods exist to characterise whether an unknown object is an active spacecraft or not. This led to my <a href="#characteriser">unknown space object characteriser</a> idea, yet to be built.</dd></div>
               <div><dt>Results</dt><dd>
                 <div class="photos two natural">
                   <figure><a href="assets/elset/decay-85004.jpg"><img src="assets/elset/decay-85004.jpg" alt="Object 85004: normalised mean altitude falling over time, and its orbital decay rate growing steeper" width="418" height="252" loading="lazy"></a><figcaption>Object 85004: normalised mean altitude and decay rate</figcaption></figure>
                   <figure><a href="assets/elset/decay-87042.jpg"><img src="assets/elset/decay-87042.jpg" alt="Object 87042: normalised mean altitude falling over time, and its orbital decay rate growing steeper" width="422" height="252" loading="lazy"></a><figcaption>Object 87042: normalised mean altitude and decay rate</figcaption></figure>
                 </div>
-                <p class="caption-note">Apologies for the poor quality, lost the original pictures due to an oversight of mine (did not commit the code and plots to GitHub and had a liquid-based incident with my laptop right after).</p>
-                <p>You can read about it a little more <a href="https://lnkd.in/p/eC-YGkwd" target="_blank" rel="noopener">here</a>.</p>
+                <p class="caption-note">Apologies for the poor quality: I lost the original plots through an oversight of mine (I hadn't committed the code and plots to GitHub, then had a liquid-based incident with my laptop).</p>
+                <p>You can read a little more about it <a href="https://lnkd.in/p/eC-YGkwd" target="_blank" rel="noopener">here</a>.</p>
               </dd></div>
               <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>NumPy</li></ul></dd></div>
             </dl>
@@ -391,17 +391,17 @@
             <span class="when">Oct 2025 – Feb 2026</span>
             <div>
               <h3>Rion Imaging: Airbus Space Competition</h3>
-              <span class="hook">I led a team of five designing a lunar imaging startup: a <strong>34-CubeSat constellation</strong> for near-real time images of most of the lunar surface. <strong>We reached the finals</strong> and were invited to present at Airbus Stevenage.</span>
+              <span class="hook">I led a team of five designing a lunar imaging startup: a <strong>34-CubeSat constellation</strong> for near-real-time images of most of the lunar surface. <strong>We reached the finals</strong> and were invited to present at Airbus Stevenage.</span>
             </div>
             <span class="status ok">Done</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>My role</dt><dd>As team lead I coordinated the business case and technical work, I also carried out the <strong>market sizing</strong> myself and set mission requirements in line with our business goals.</dd></div>
+              <div><dt>My role</dt><dd>As team lead, I coordinated the business case and technical work. I also carried out the <strong>market sizing</strong> myself and set mission requirements in line with our business goals.</dd></div>
               <div><dt>Concept</dt><dd>30 imaging and 4 relay 2U CubeSats in lunar orbit. The imaging layer flies at 350 km and the support layer at 100 km, at the 93° inclination selected from our <strong>GMAT trade study</strong>, with planes evenly spaced in RAAN to avoid coverage clustering, for <strong>99% lunar coverage</strong>. The business case sized a £1.17B annual addressable market in 2045, with £69.5M of non-recurring cost covered by a £77M three-phase funding plan.</dd></div>
-              <div><dt>Feedback</dt><dd>Before the final, reviewers pointed out that our Walker design based on preliminary hand calcs ignored lunar rotation, so we replaced it with a full constellation design in GMAT using its lunar gravity model and rotation. At the final, the judges found the realistic customer base too small: our estimate of lunar settlement was too large to justify near live imaging of such a large portion of the lunar surface.</dd></div>
-              <div><dt>Lesson</dt><dd>Business concepts should start with what the market needs, from a customer base rather than a cool concept. I would later learn in the UKSEDS Space Entrepreneurship programme that this is called a demand pull instead of a technology push.</dd></div>
+              <div><dt>Feedback</dt><dd>Before the final, reviewers pointed out that our Walker design based on preliminary hand calculations ignored lunar rotation, so we replaced it with a full constellation design in GMAT using its lunar gravity model and rotation. At the final, the judges found the realistic customer base too small: our estimate of lunar settlement was too large to justify near-live imaging of such a large portion of the lunar surface.</dd></div>
+              <div><dt>Lesson</dt><dd>Business concepts should start with what the market needs, from a customer base rather than a cool concept. I would later learn in the UKSEDS Space Entrepreneurship Programme that this is called a demand pull instead of a technology push.</dd></div>
               <div><dt>Team</dt><dd>
                 <div class="photos two natural">
                   <figure><a href="assets/rion/finals-team.jpg"><img src="assets/rion/finals-team.jpg" alt="The five-person Rion Imaging team in front of the Airbus Space Competition 2025/26 title screen" width="1400" height="936" loading="lazy"></a><figcaption>Finals day at Airbus Stevenage</figcaption></figure>
@@ -501,7 +501,7 @@
                     <video controls playsinline preload="metadata" poster="assets/scorpio/hot-fire-poster.jpg" width="480" height="480">
                       <source src="assets/scorpio/hot-fire.mp4" type="video/mp4">
                     </video>
-                    <figcaption>Comet-1 hot fire with the Scorpio 3 engine. Apologies for the low quality: I'm trying to track down the higher quality video. You can see it <a href="https://www.linkedin.com/pulse/behind-scenes-sulre-full-stack-hot-fire-liquid-rocket-ben-busschaert-udyle/" target="_blank" rel="noopener">here</a>.</figcaption>
+                    <figcaption>Comet-1 hot fire with the Scorpio 3 engine. Apologies for the low quality: I'm trying to track down the higher-quality video. You can see it <a href="https://www.linkedin.com/pulse/behind-scenes-sulre-full-stack-hot-fire-liquid-rocket-ben-busschaert-udyle/" target="_blank" rel="noopener">here</a>.</figcaption>
                   </figure>
                 </div>
               </dd></div>
@@ -575,7 +575,7 @@
             <span class="when">May 2026 –</span>
             <div>
               <h3>Head of Projects, SUSF</h3>
-              <span class="hook">Society membership grew from ~150 to 260+ largely thanks to our large project selection, this year our teams entered a record five national competitions and are attempting new exciting milestones.</span>
+              <span class="hook">Society membership grew from ~150 to 260+, largely thanks to our wide range of projects. This year our teams entered a record five national competitions and are attempting exciting new milestones.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
@@ -672,7 +672,7 @@
             <li class="upcoming">
               <p class="when">Feb 2027</p>
               <h3>Airbus Space Design Competition finals, again</h3>
-              <p>Hoping to reach the finals again, building on what <a href="#rion">RION</a> taught us.</p>
+              <p>Hoping to reach the finals again, building on what <a href="#rion">Rion</a> taught us.</p>
             </li>
           </ol>
         </details>
