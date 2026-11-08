@@ -126,24 +126,25 @@
           <span class="lead-short">I am simulating a machine learning program onboard <strong>Rosetta</strong> that has been handed the mission's wrong pre-arrival guess of <strong>comet 67P's gravity</strong>.</span>
         </summary>
         <div class="flag-body">
-          <!-- Every sentence below is taken from the Individual Project Plan (23 Oct 2026), with at most minor rewording. -->
+          <!-- Condensed from the Individual Project Plan (2 Nov 2026). -->
           <figure class="figure">
             <img src="assets/thesis/67p.jpg" alt="3D render of comet 67P/Churyumov–Gerasimenko: two lobes joined by a narrow neck" width="900" height="640">
             <figcaption>Comet 67P, rendered from the shape model in Izzo &amp; Gómez (2022)</figcaption>
           </figure>
-          <p class="lead">Astrodynamicists have many mature dynamical models for the major bodies of the solar system: we can precisely predict how a spacecraft will move around the Sun, the planets, and our Moon, thanks to the fact that their gravity has been measured over decades. Comets and asteroids are a completely different matter: each one has its own shape and density distribution, hence its own gravity, and its own spin. Before arrival, comet 67P was thought to be a smooth "rugby ball" shape; the images obtained on approach instead revealed a shape closer to a dumbbell. In this project, I am simulating a machine learning program onboard Rosetta that has been handed the same wrong initial guess. As the spacecraft flies the same orbits it flew on its mission, the program compares where it expected the spacecraft to be with where it really is, using that difference to correct its prediction of the comet's gravity.</p>
+          <p class="lead">Every comet and asteroid has its own shape, density and spin, so its gravity is poorly known until a spacecraft arrives. Before Rosetta reached comet 67P in 2014, the comet was thought to be a smooth "rugby ball"; it turned out to be a dumbbell, and a reliable gravity model took until a month before Philae's landing. I am simulating a machine learning program onboard Rosetta that starts from that same wrong guess, and corrects it by comparing where it expected the spacecraft to be with where it really is.</p>
           <p class="meta">
             <span><span class="k">Supervisor</span><span class="v">Prof. Alexander Wittig</span></span>
             <span><span class="k">Status</span><span class="v status warn">In progress</span></span>
+            <span><span class="k">Submission</span><span class="v">Apr 2027</span></span>
           </p>
           <dl class="sections">
-            <div><dt>Aim</dt><dd>To determine whether a <strong>neural Hamiltonian</strong> learned gravity model, initialised with the pre-arrival data of comet 67P and trained only on data collected along Rosetta's flown trajectory, can correct that wrong model, and how its accuracy, and the tracking time needed to reach it, compare with those of a <strong>spherical-harmonic</strong> model estimated from the same data.</dd></div>
-            <div><dt>Approach</dt><dd>This is a simulation study, using a simulated comet based on the uniform-density mascon model of 67P released with the geodesyNets code (Izzo and Gómez, 2022). A simulated spacecraft will replay the sequence of orbits Rosetta flew between arrival and lander delivery. The learned model will start from the pre-arrival data, propagate the spacecraft's state forward by a fixed timestep, compare its prediction with the observed state, and update the model to reduce the error.</dd></div>
-            <div><dt>Why a neural Hamiltonian</dt><dd>It is estimated directly from tracking arcs, accepts an initial set of data, remains valid close to the nucleus, and is small (353–721 parameters).</dd></div>
-            <div><dt>Baseline</dt><dd>The conventional spherical-harmonic estimator will be run as a <strong>batch least-squares</strong> fit receiving the same initial model, and the same observed states at the same update interval. To keep the comparison fair, it is fitted to the same arcs, through the same integrator and sensitivities.</dd></div>
-            <div><dt>What's new</dt><dd>This project builds directly on Acciarini and Izzo (2026), and differs in three ways: the initial model is wrong (the pre-arrival data, and an inaccurate mass), the trajectory follows Rosetta's own, and the comparison focuses on how long each representation takes to recover from the wrong prior.</dd></div>
-            <div><dt>Success</dt><dd>I will consider the project a success if the program can correct the wrong guess at all; it succeeds further if it does so faster than the conventional method.</dd></div>
-            <div><dt>Stage 2</dt><dd>A reinforcement-learning agent chooses the trajectory to gather information faster. This will only be attempted if Stage 1 is complete on schedule.</dd></div>
+            <div><dt>Aim</dt><dd>Can a learned gravity model, starting from the pre-arrival data and trained only along Rosetta's flown trajectory, correct the wrong model? And how many point masses would a conventional <strong>mascon model</strong> need to match it as tracking time goes on?</dd></div>
+            <div><dt>Approach</dt><dd>A simulation study. The "true" comet is the uniform-density mascon model of 67P from geodesyNets (Izzo and Gómez, 2022). A simulated spacecraft replays Rosetta's orbits from arrival to lander delivery, and the learner trains only on what the spacecraft could measure. The learning method itself is chosen through a trade analysis.</dd></div>
+            <div><dt>Comparison</dt><dd>The true model is reduced to a <strong>fidelity scale</strong>, from a single point mass up to the full model. Placing the learner on that scale gives its <strong>equivalent mascon count</strong>, mapped over tracking time and distance from the comet.</dd></div>
+            <div><dt>What's new</dt><dd>It builds on Acciarini and Izzo (2026), but starts from a wrong initial model, flies Rosetta's real trajectory, and measures accuracy against model size.</dd></div>
+            <div><dt>Success</dt><dd>The program corrects the wrong guess at all; better still if it needs fewer parameters than a mascon model of the same accuracy.</dd></div>
+            <div><dt>Stage 2</dt><dd>Only if Stage 1 finishes on schedule: a reinforcement-learning agent picks the orbits to learn faster, compared against greedy D-optimal selection.</dd></div>
+            <div><dt>Stack</dt><dd><ul class="tags"><li>Python</li><li>PyTorch</li><li>SciPy</li><li>SPICE</li><li>Iridis HPC</li></ul></dd></div>
           </dl>
         </div>
       </details>
@@ -199,7 +200,7 @@
       <details class="flagship" id="starworks">
         <summary>
           <span class="flag-top"><span class="flag-label">Founder &amp; lead: Southampton University Spaceflight Society, Jan 2025 – present</span><span class="fold" aria-hidden="true"></span></span>
-          <h3>Starworks: a student rocket that lands itself</h3>
+          <h3>Starworks: founding a self-landing rocket project</h3>
           <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our 2.5 kN Banshee engine. I <strong>founded it and lead it</strong>.</span>
         </summary>
         <div class="flag-body">
