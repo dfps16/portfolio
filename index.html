@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-11-03a">
+  <link rel="stylesheet" href="styles.css?v=2026-11-08a">
 </head>
 <body>
 
@@ -64,6 +64,7 @@
           <!-- Hidden until assets/cv.pdf exists: drop the file in and the button appears. -->
           <a class="btn" id="cv-btn" href="assets/cv.pdf" download="DiegoFPS_CV.pdf" hidden>Download CV</a>
         </div>
+        <p class="links-note">I'm always happy to talk about space tech, or tech in general, so feel free to get in touch.</p>
       </div>
 
       <!-- Portrait: replace assets/headshot.webp to change the photo (square image works best) -->
@@ -261,22 +262,22 @@
           <summary>
             <span class="when">Personal</span>
             <div>
-              <h3>Relative navigation for a chaser spacecraft in LEO</h3>
-              <span class="hook">A spacecraft trying to meet another in orbit has to work out where its target is from noisy distance and angle measurements. This project builds the filter that does it.</span>
+              <h3>Rendezvous GNC for a chaser spacecraft in LEO</h3>
+              <span class="hook">A chaser spacecraft approaching a target in low Earth orbit. The aim is to build every part of the guidance, navigation and control loop around the <strong>Clohessy–Wiltshire</strong> equations.</span>
             </div>
             <span class="status warn">In progress</span>
             <span class="fold" aria-hidden="true"></span>
           </summary>
           <div class="row-body">
             <dl class="sections">
-              <div><dt>Why I did it</dt><dd>Navigation was the missing piece in my GNC work: I had guidance and control projects but no estimation. This is the estimation half of a rendezvous loop.</dd></div>
-              <div><dt>Method</dt><dd>A Python-based simulator in <strong>Clohessy–Wiltshire</strong> dynamics. This makes propagation exact, so non-linearity is only introduced through the range and bearing measurements. An <strong>extended Kalman filter</strong> written from scratch, compared against dead reckoning and a least-squares fix. Tuned to statistical consistency (<strong>NEES and NIS</strong> inside chi-square bounds), then used to show that bearing-only tracking can't pin down range until the chaser manoeuvres.</dd></div>
+              <div><dt>Why I did it</dt><dd>My earlier projects covered guidance and control, but not navigation. This one covers the whole loop.</dd></div>
+              <div><dt>Plan</dt><dd>A Python simulator in Clohessy–Wiltshire dynamics, then the three parts of the loop: navigation (working out where the target is from noisy measurements), guidance (planning the approach) and control (the chaser's manoeuvres).</dd></div>
+              <div><dt>Where it stands</dt><dd>Just started: the repository and the structure of the dynamics engine are set up.</dd></div>
               <div><dt>Stack &amp; code</dt><dd>
-                <ul class="tags"><li>Python</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li></ul>
+                <ul class="tags"><li>Python</li><li>uv</li></ul>
                 <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
               </dd></div>
               <div><dt>What I learnt so far</dt><dd>Building this project is similar in structure to the previous <a href="#vtvl">vtvl-sim</a> I made; however, the dynamics and measurement parts are new to me.</dd></div>
-              <div><dt>What's next</dt><dd>Feeding the estimate into a rendezvous controller, to close the full guidance, navigation and control loop.</dd></div>
             </dl>
           </div>
         </details>
