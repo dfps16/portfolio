@@ -10,8 +10,8 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2026-11-11a">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2026-11-18a">
 </head>
 <body>
 
@@ -112,7 +112,6 @@
     <div class="wrap">
       <div class="block-head">
         <div>
-          <p class="num">01</p>
           <h2>Flagships</h2>
           <p>These are the three projects that are closest to my heart at the moment: they show what I am spending the most time on, what I built while in industry, and the team I am proud to have founded.</p>
         </div>
@@ -122,7 +121,7 @@
       <!-- Thesis: main item -->
       <details class="flagship main" id="thesis">
         <summary>
-          <span class="flag-top"><span class="flag-label">Main project: BEng thesis, 2026–27</span><span class="fold" aria-hidden="true"></span></span>
+          <span class="fold" aria-hidden="true"></span>
           <h3>Onboard learning of small-body dynamics from an imperfect initial model</h3>
           <span class="lead-short">I am simulating a machine learning program onboard <strong>Rosetta</strong> that has been handed the mission's wrong pre-arrival guess of <strong>comet 67P's gravity</strong>.</span>
         </summary>
@@ -134,6 +133,7 @@
           </figure>
           <p class="lead">Every comet and asteroid has its own shape, density and spin, so its gravity is poorly known until a spacecraft arrives. Before Rosetta reached comet 67P in 2014, the comet was thought to be a smooth "rugby ball"; it turned out to be a dumbbell, and a reliable gravity model took until a month before Philae's landing. I am simulating a machine learning program onboard Rosetta that starts from that same wrong guess, and corrects it by comparing where it expected the spacecraft to be with where it really is.</p>
           <p class="meta">
+            <span><span class="k">Project</span><span class="v">BEng thesis, 2026–27</span></span>
             <span><span class="k">Supervisor</span><span class="v">Prof. Alexander Wittig</span></span>
             <span><span class="k">Status</span><span class="v status warn">In progress</span></span>
             <span><span class="k">Submission</span><span class="v">Apr 2027</span></span>
@@ -145,7 +145,6 @@
             <div><dt>What's new</dt><dd>It builds on Acciarini and Izzo (2026), but starts from a wrong initial model, flies Rosetta's real trajectory, and measures accuracy against model size.</dd></div>
             <div><dt>Success</dt><dd>The program corrects the wrong guess at all; better still if it needs fewer parameters than a mascon model of the same accuracy.</dd></div>
             <div><dt>Stage 2</dt><dd>Only if Stage 1 finishes on schedule: a reinforcement-learning agent picks the orbits to learn faster, compared against greedy D-optimal selection.</dd></div>
-            <div><dt>Stack</dt><dd><ul class="tags"><li>Python</li><li>PyTorch</li><li>SciPy</li><li>SPICE</li><li>Iridis HPC</li></ul></dd></div>
           </dl>
         </div>
       </details>
@@ -153,12 +152,17 @@
       <!-- MMAT -->
       <details class="flagship" id="magdrive">
         <summary>
-          <span class="flag-top"><span class="flag-label">Internship: Magdrive, Harwell, Jul – Aug 2026</span><span class="fold" aria-hidden="true"></span></span>
+          <span class="fold" aria-hidden="true"></span>
           <h3>MMAT: the Magdrive Mission Analysis Tool</h3>
           <span class="lead-short">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>.</span>
         </summary>
         <div class="flag-body">
           <p class="lead">At Magdrive, I built a tool to answer any customer manoeuvre question in house, and carried out a <strong>verification and validation (V&amp;V) campaign</strong>. I built this during my UKSA Skills for Space internship at the company. It was a wonderful company to work for, and I can't recommend it enough.</p>
+          <p class="meta">
+            <span><span class="k">Role</span><span class="v">Intern, UKSA Skills for Space</span></span>
+            <span><span class="k">Where</span><span class="v">Magdrive, Harwell</span></span>
+            <span><span class="k">Dates</span><span class="v">Jul – Aug 2026</span></span>
+          </p>
           <table class="ba">
             <thead><tr><th></th><th>Before</th><th>After</th></tr></thead>
             <tbody>
@@ -191,7 +195,6 @@
             </dd></div>
             <div><dt>Delivered</dt><dd>27 modules, three test suites, packaged as an installer. <strong>Still in use at Magdrive.</strong></dd></div>
             <div><dt>Poster</dt><dd>Presented at UKEO 2026, University of Warwick (15–17 Sep 2026). <a class="repo" href="assets/mmat/mmat-poster.pdf">View the poster (PDF) →</a></dd></div>
-            <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>NiceGUI</li><li>Plotly</li><li>pytest</li><li>NASA GMAT</li></ul></dd></div>
           </dl>
       
         </div>
@@ -200,12 +203,17 @@
       <!-- Starworks -->
       <details class="flagship" id="starworks">
         <summary>
-          <span class="flag-top"><span class="flag-label">Founder &amp; lead: Southampton University Spaceflight Society, Jan 2025 – present</span><span class="fold" aria-hidden="true"></span></span>
+          <span class="fold" aria-hidden="true"></span>
           <h3>Starworks: founding a self-landing rocket project</h3>
           <span class="lead-short">SUSF's vertical take-off, vertical-landing project, built around our 2.5 kN Banshee engine. I <strong>founded it and lead it</strong>.</span>
         </summary>
         <div class="flag-body">
           <p class="lead">Starworks is SUSF's vertical take-off, vertical-landing project, built around our Banshee engine (2.5 kN design thrust). I lead it technically and run the team.</p>
+          <p class="meta">
+            <span><span class="k">Role</span><span class="v">Founder &amp; lead</span></span>
+            <span><span class="k">Society</span><span class="v">Southampton University Spaceflight Society</span></span>
+            <span><span class="k">Dates</span><span class="v">Jan 2025 – present</span></span>
+          </p>
           <dl class="sections">
             <div><dt>Origin</dt><dd>I came across the Gruyère Space Program's lander, and shot an email to their lead for some advice on starting a lander project. Surprisingly, they answered immediately and Starworks as an idea was born the next day. I formally founded Starworks in January 2025 and assembled my dream team to lead it.</dd></div>
             <div><dt>Milestones</dt><dd>
@@ -247,7 +255,6 @@
     <div class="wrap">
       <div class="block-head">
         <div>
-          <p class="num">02</p>
           <h2>Engineering Projects</h2>
           <p>My short stint as a propulsion engineer, finding my passion in mission design, and my early experiments with the dark magic of GNC and orbit determination. Click any row for extra details.</p>
         </div>
@@ -273,8 +280,7 @@
               <div><dt>Why I did it</dt><dd>My earlier projects covered guidance and control, but not navigation. This one covers the whole loop.</dd></div>
               <div><dt>Plan</dt><dd>A Python simulator in Clohessy–Wiltshire dynamics, then the three parts of the loop: navigation (working out where the target is from noisy measurements), guidance (planning the approach) and control (the chaser's manoeuvres).</dd></div>
               <div><dt>Where it stands</dt><dd>Just started: the repository and the structure of the dynamics engine are set up.</dd></div>
-              <div><dt>Stack &amp; code</dt><dd>
-                <ul class="tags"><li>Python</li><li>uv</li></ul>
+              <div><dt>Code</dt><dd>
                 <a class="repo" href="https://github.com/dfps16/cw-gnc">github.com/dfps16/cw-gnc →</a>
               </dd></div>
               <div><dt>What I learnt so far</dt><dd>Building this project is similar in structure to the previous <a href="#vtvl">vtvl-sim</a> I made; however, the dynamics and measurement parts are new to me.</dd></div>
@@ -315,8 +321,7 @@
               <figure><a href="assets/vtvl/animation.jpg"><img src="assets/vtvl/animation.jpg" alt="Animation frame of the lander climbing towards its first target" width="1050" height="1550" loading="lazy"></a><figcaption>Animated replay of the same flight.</figcaption></figure>
             </div>
             <dl class="sections">
-              <div><dt>Stack &amp; code</dt><dd>
-                <ul class="tags"><li>Python</li><li>SciPy</li><li>Pydantic</li><li>pytest</li><li>uv</li></ul>
+              <div><dt>Code</dt><dd>
                 <a class="repo" href="https://github.com/dfps16/vtvl-sim">github.com/dfps16/vtvl-sim →</a>
               </dd></div>
               <div><dt>What I learnt</dt><dd>Once mass depletion was put in place, LQR turned out to burn more propellant and flame out early, at around 2.9 m altitude, whereas the cascade landed with 2.1 kg of fuel to spare. This taught me about cost functions: the LQR controller I designed had no fuel term, which explains the behaviour.</dd></div>
@@ -354,7 +359,6 @@
                   </figure>
                 </div>
               </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>PID control</li><li>Embedded</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -382,7 +386,6 @@
                 <p class="caption-note">Apologies for the poor quality: I lost the original plots through an oversight of mine (I hadn't committed the code and plots to GitHub, then had a liquid-based incident with my laptop).</p>
                 <p>You can read a little more about it <a href="https://lnkd.in/p/eC-YGkwd" target="_blank" rel="noopener">here</a>.</p>
               </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>NumPy</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -427,7 +430,6 @@
                 </ul>
                 <p class="note">The February reports describe the design before the final (24 satellites at 250 km); the finals deck shows the redesign above.</p>
               </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>NASA GMAT</li><li>Excel</li><li>LaTeX</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -474,7 +476,6 @@
             <dl class="sections">
               <div><dt>What I did</dt><dd>Early-stage design of the regenerative cooling jacket for a &gt;30 kN methalox engine, using analytical thermal models in Python and RPA. Also wrote CONOPS and PFMEA documentation. From April 2025 I was <a href="#wau-lead">team lead</a>.</dd></div>
               <div><dt>Notes</dt><dd>Figures are under NDA, and the company is now defunct. It started the same month I founded Starworks, so I worked on both in parallel.</dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>Python</li><li>RPA</li><li>Thermal analysis</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -507,7 +508,6 @@
                   </figure>
                 </div>
               </dd></div>
-              <div><dt>Skills</dt><dd><ul class="tags"><li>SolidWorks</li><li>Excel</li><li>Manual machining</li></ul></dd></div>
             </dl>
           </div>
         </details>
@@ -517,12 +517,10 @@
       <h3 class="subhead">Upcoming projects</h3>
       <div class="grid mini">
         <article id="nea">
-          <p class="when-mini">Planned</p>
           <h4>Near-Earth asteroid rendezvous simulator</h4>
           <p>An <strong>interplanetary trajectory design</strong> project. The plan: pick a low-Δv target from NASA's NHATS list, survey launch windows with a porkchop plot, then converge a high-fidelity transfer in Orekit with my own shooting corrector, checked against Orekit's. The flight dynamics code becomes a shared package that a later lunar orbiter project will reuse.</p>
         </article>
         <article id="characteriser">
-          <p class="when-mini">Planned</p>
           <h4>Unknown space object characteriser</h4>
           <p>A <strong>space domain awareness</strong> project. The plan: estimate the area-to-mass ratio and origin of poorly characterised space objects from public tracking data, then test the estimates blind against objects whose properties are known. It will run on my own C++ propagator and a batch least-squares estimator. The first part, the propagator itself, is in progress.</p>
         </article>
@@ -536,7 +534,6 @@
     <div class="wrap">
       <div class="block-head">
         <div>
-          <p class="num">03</p>
           <h2>Leadership &amp; Management</h2>
           <p>The teams I run and the structures I've set up to help them work.</p>
         </div>
@@ -643,7 +640,6 @@
     <div class="wrap">
       <div class="block-head">
         <div>
-          <p class="num">04</p>
           <h2>Space Industry Journey</h2>
           <p>Every step, from my high school writing to a 2026 jam-packed with milestones and events.</p>
         </div>
@@ -833,7 +829,6 @@
   <!-- ================= 05 WHAT'S NEXT ================= -->
   <section class="block closing" id="next">
     <div class="wrap">
-      <p class="num">05</p>
       <h2>What's next</h2>
       <p class="next-text">My final year at Southampton, then a master's specialising in spacecraft engineering and flight dynamics, and a role in NewSpace.</p>
       <p class="to-top"><a href="#top">Back to top ↑</a></p>
